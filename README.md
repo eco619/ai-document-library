@@ -1,6 +1,6 @@
 # eco619
 
-> **Engineering intelligent systems through understanding, context, and evolving architecture.**
+**Engineering intelligent systems through understanding, context, and evolving architecture.**
 
 eco619 is an engineering workspace dedicated to building, documenting, testing, and sharing intelligent systems, practical software, technical research, and evolving architectures. It documents not only the software being developed, but also the engineering process, architectural decisions, and lessons learned from transforming questions into working systems.
 
@@ -8,7 +8,7 @@ eco619 is an engineering workspace dedicated to building, documenting, testing, 
 
 ## A Question That Built This Workspace
 
-> **"How did I miss this?"**
+**"How did I miss this?"**
 
 That question became the foundation for every project in this workspace. The objective is not simply to retrieve information—it is to improve understanding by preserving context, relationships, evidence, and traceability.
 
