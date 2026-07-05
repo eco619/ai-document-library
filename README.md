@@ -24,7 +24,7 @@ The **AI Document Library** is the flagship project currently under development.
 
 Most AI document systems retrieve information. The AI Document Library is engineered to preserve context, connect information across multiple document types, recover visual information, maintain provenance, and support everything from document understanding to evidence-based analysis while allowing every observation to be traced back to its original source.
 
-> **Technology should support human judgment. It should never replace it.**
+**Technology should support human judgment. It should never replace it.**
 
 ---
 
