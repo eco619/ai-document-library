@@ -1,6 +1,11 @@
 # AI Document Library Enterprise Architecture Specification
 An enterprise document intelligence platform designed to preserve evidence integrity, traceability, and explainable answers across complex engineering, legal, and business records. It transforms unstructured documents into verifiable, auditable knowledge while maintaining complete provenance from the source artifact to every AI-generated answer.
 
+## About This Repository
+
+The AI Document Library is part of the **eco619** platform.
+
+This repository contains the enterprise architecture, engineering methodology, validation approach, and platform capabilities of the AI Document Library. The implementation is maintained separately from this documentation.
 
 ## Technical Library
 
