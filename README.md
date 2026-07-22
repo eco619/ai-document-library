@@ -1,118 +1,190 @@
-# eco619
+# AI Document Library Enterprise Architecture Specification
+An enterprise document intelligence platform designed to preserve evidence integrity, traceability, and explainable answers across complex engineering, legal, and business records. It transforms unstructured documents into verifiable, auditable knowledge while maintaining complete provenance from the source artifact to every AI-generated answer.
 
-**Engineering intelligent systems through understanding, context, and evolving architecture.**
 
-eco619 is an engineering workspace dedicated to building, documenting, testing, and sharing intelligent systems, practical software, technical research, and evolving architectures. It documents not only the software being developed, but also the engineering process, architectural decisions, and lessons learned from transforming questions into working systems.
+## Technical Library
 
----
+The Enterprise Architecture Specification provides a high-level view of the AI Document Library platform. Additional engineering documentation is available in the companion Technical Library.
 
-## A Question That Built This Workspace
+| Document | Purpose |
+|----------|---------|
+| `DESIGN_PHILOSOPHY.md` | Engineering principles governing the platform |
+| `ARCHITECTURAL_RATIONALE.md` | Rationale behind major architectural decisions |
+| `SCHEMAS.md` | Canonical record architecture and data contracts |
+| `FORENSICS_PLAYBOOK.md` | Explainable evidence lineage and investigation workflows |
+| `ROADMAP.md` | Strategic architectural direction |
 
-**"How did I miss this?"**
-
-That question became the foundation for every project in this workspace. The objective is not simply to retrieve information—it is to improve understanding by preserving context, relationships, evidence, and traceability.
-
----
-
-## Current Flagship Project
-
-The **AI Document Library** is the flagship project currently under development. It is an AI-powered document intelligence platform designed to transform documents into connected, traceable, and explainable knowledge. The platform supports everything from document understanding and knowledge discovery to evidence-aware analysis and traceable observations.
-
----
-
-## What Makes This Different
-
-Most AI document systems retrieve information. The AI Document Library is engineered to preserve context, connect information across multiple document types, recover visual information, maintain provenance, and support everything from document understanding to evidence-based analysis while allowing every observation to be traced back to its original source.
-
-**Technology should support human judgment. It should never replace it.**
-
----
-
-## Current Platform Architecture
-
-The current platform is organized into the following primary engineering subsystems. As the platform evolves, these components will continue to adapt while preserving the core engineering principles described below.
-
+## Technology Stack & Explicit Mapping
+- Python — orchestration, AI integration, document processing, and business logic.
+- Rust — high-performance parsing and verification components.
+- Go — concurrent services, workers, and distributed processing.
+- Shared interchange — immutable JSON records with authoritative artifact identifiers.
+- Persistent storage — SQLite and PostgreSQL using common schemas.
+- Messaging — Apache Kafka for enterprise deployments.
+- Containerization — Docker with isolated service boundaries.
+### System Context Diagram
 ```text
-├── Document Intelligence
-│   ├── PDF, DOCX, MSG, and OCR processing
-│   ├── Metadata extraction
-│   ├── Record enrichment
-│   └── Document normalization
-│
-├── Evidence & Knowledge
-│   ├── Evidence registry
-│   ├── Investigation index
-│   ├── Entity records
-│   ├── Relationship mapping
-│   └── Source traceability
-│
-├── Visual Intelligence
-│   ├── Visual object analysis
-│   ├── Annotation recovery
-│   ├── Markup interpretation
-│   └── Visual evidence recovery
-│
-├── AI & Reasoning
-│   ├── AI provider abstraction
-│   ├── Multi-model support
-│   ├── Summary generation
-│   ├── Verification
-│   └── Coverage analysis
-│
-└── Infrastructure
-    ├── JSON record architecture
-    ├── SQLite
-    ├── Configuration management
-    └── Project management utilities
+Server / File Shares
+        │
+        ▼
+Project Discovery
+        │
+        ▼
+Artifact Registration
+        │
+        ▼
+Reader Pipeline (PDF / DOCX / DOC / MSG / OCR / Images)
+        │
+        ▼
+Metadata & Relationship Intelligence
+        │
+        ▼
+Evidence • Verification • Traceability
+        │
+        ▼
+Answer Accountability & Knowledge Evolution
 ```
+### Core Architectural Modules
+#### 1. Autonomous Platform Framework
+The foundation responsible for platform startup, configuration, runtime orchestration, autonomous discovery, and execution sequencing.
+#### 2. Document Ingestion Platform
+Registers every artifact, preserves identity, extracts metadata, detects duplicates, and manages lifecycle state.
+#### 3. Multi-Format Reader Architecture
+Provides specialized readers for PDF, DOCX, legacy DOC, MSG, OCR, images, metadata, and system files through a unified architecture.
+#### 4. Reader Orchestration
+Coordinates reader queues, workers, recovery, execution verification, and scalable processing.
+#### 5. Legacy DOC Bridge
+Preserves legacy DOC evidence integrity while producing validated DOCX and PDF derivatives with cross-verification.
+#### 6. Metadata Intelligence
+Builds authoritative metadata records, relationships, enrichment, and traceability.
+#### 7. PDF Intelligence
+Extracts, enriches, validates, summarizes, and prepares PDF content for AI.
+#### 8. Communication Intelligence
+Preserves email structure, attachments, chronology, and communication traceability.
+#### 9. Email Traceability Architecture
+Provides end-to-end traceability for email messages, attachments, conversations, routing, and evidence lineage while preserving authoritative relationships between communications and associated project artifacts.
+#### 10. OCR Architecture
+Provides fallback reading and verification when native extraction is unavailable.
+#### 11. Visual Intelligence
+Analyzes drawings, markups, images, and engineering visuals.
+#### 12. AI Integration Layer
+Provides provider-independent AI services, prompt management, summaries, and observations.
+#### 13. Observation Architecture
+Creates immutable observation records linked to authoritative source evidence.
+#### 14. Evidence Architecture
+Maintains evidence relationships, provenance, and verification.
+#### 15. Relationship Intelligence
+Discovers entities and cross-document relationships.
+#### 16. Verification Architecture
+Performs reader, extraction, coverage, and cross-reader verification.
+#### 17. Explainable AI
+Ensures every answer is supported by traceable evidence and confidence.
+#### 18. JSON Record Architecture
+Defines canonical record schemas for every processing stage.
+#### 19. Traceability Framework
+Connects projects, artifacts, metadata, readers, observations, evidence, questions, answers, and knowledge evolution.
+#### 20. Answer Accountability Pipeline
+Records questions, evidence lineage, answers, and revisions.
+#### 21. Knowledge Evolution Architecture
+Improves historical answers as new evidence becomes available.
+#### 22. Engineering Methodology
+Documents the design principles guiding the platform.
+#### 23. Engineering Notebook
+Captures architectural decisions, redesigns, discoveries, and tradeoffs.
+#### 24. Engineering Partner Vision
+Positions AI as an engineering assistant that augments human judgment.
+#### 25. Security and Governance Architecture
+Protects sensitive information through permissions, provenance, tamper detection, and governance.
+### System Deployment & Execution Primitives
+- Platform entry point: platform_runtime.py
+- Configuration bootstrap: platform_config.py
+- Optional container deployment via Docker
+- Autonomous orchestration of readers and verification services
+### Core Database Schema Manifest
+- Projects
+- Artifacts
+- Metadata
+- Reader Records
+- Summaries
+- Observations
+- Evidence
+- Entities
+- Relationships
+- Verification
+- Questions
+- Answer Support
+- Answers
+- Knowledge Evolution
+- Audit Log
+### Architectural Principles
+- Evidence integrity before AI interpretation
+- Whole-document-first processing
+- Single-responsibility architecture
+- Validation-first development
+- Provider independence
+- Complete traceability
+### Non-Functional Requirements
+- Scalability
+- Reliability
+- Fault tolerance
+- Performance
+- Auditability
+- Extensibility
+### Deployment Topologies
+- Standalone
+- Departmental
+- Enterprise
+- Hybrid Cloud
+### API & Integration Strategy
+- JSON-first interfaces
+- REST APIs
+- Versioned contracts
+- Provider-agnostic AI abstraction
+### Versioning & Compatibility Policy
+- Immutable identifiers
+- Backward-compatible schemas
+- Migration support
+- Audit history
+### Future Extension Framework
+- Plugin readers
+- Additional AI providers
+- Distributed processing
+- Additional storage engines
 
----
-
-## Current Engineering Capabilities
-
-- Document record generation
-- PDF, DOCX, MSG, OCR, and metadata processing
-- Communication Intelligence
-- Entity record generation
-- Evidence Registry
-- Evidence Review
-- Investigation Index
-- Relationship management
-- Visual object analysis
-- Visual evidence recovery
-- AI provider abstraction
-- Verification framework
-- Coverage analysis
-- Source support tracking
-
----
-
-## Technology Stack
-
-- **Language:** Python
-- **AI Models:** Ollama, Llama, Qwen Vision
-- **Document Processing:** PyMuPDF, Tesseract OCR
-- **Data & Storage:** JSON, SQLite
-- **Development:** Git, Markdown
-- **Currently Evaluating:** OpenCV, Vector Databases, Knowledge Graph concepts
-
----
-
-## Engineering Principles
-
-- Start with the problem, not the technology.
-- Engineering is rarely linear.
-- Better questions lead to better architecture.
-- Preserve context.
-- Trace every observation back to its source.
-- Support evidence-based discussions.
-- Support human judgment.
-- Design systems that evolve as technology evolves.
-- Document the journey as well as the destination.
-- Share knowledge whenever it benefits others.
-
----
-
-## Looking Forward
-
-eco619 is intended to evolve beyond a single technology or project. The AI Document Library represents the first implementation of a broader engineering vision focused on Knowledge Evolution, explainable observations, and architectures that continue to adapt as AI technologies evolve.
+### Reference Implementation
+The AI Document Library reference implementation is organized as a modular, multi-language enterprise software platform. Responsibilities are separated by execution role while sharing canonical record definitions and immutable artifact identifiers.
+```text
+AI_Document_Library/
+│
+├── .github/                     # GitHub workflows, issue templates, CI/CD
+├── config/                      # Platform configuration, schemas, environment settings
+├── db/
+│   ├── migrations/              # Database migration scripts
+│   └── schemas/                 # Canonical JSON Record definitions
+├── src/
+│   ├── python/                  # Python Engine
+│   │   ├── app.py               # platform_runtime.py execution layer
+│   │   ├── config.py            # platform_config.py initialization
+│   │   ├── ai/                  # AI abstraction & prompt management
+│   │   ├── ingestion/           # Document discovery & registration
+│   │   ├── readers/             # PDF, DOCX, DOC, MSG, OCR & image readers
+│   │   ├── verification/        # Cross-reader & evidence verification
+│   │   ├── accountability/      # Answer Accountability Pipeline
+│   │   ├── evolution/           # Knowledge Evolution Architecture
+│   │   └── pipeline/            # Processing orchestration
+│   ├── rust/                    # High-performance parsing & validation
+│   │   ├── Cargo.toml
+│   │   └── src/
+│   └── go/                      # Concurrent orchestration services
+│       ├── go.mod
+│       └── main.go              # Queues, workers & heartbeat manager
+├── docker/
+│   ├── Dockerfile.python
+│   ├── Dockerfile.rust
+│   ├── Dockerfile.go
+│   └── docker-compose.yml
+├── docs/                        # Architecture & engineering documentation
+├── tests/                       # Validation & regression testing
+└── README.md                    # Project overview
+```
+This directory structure represents the logical organization of the reference implementation rather than a required physical layout. Components may be deployed as a monolithic application, distributed services, or containerized workloads while preserving the same architectural responsibilities, canonical record definitions, and evidence traceability model.
