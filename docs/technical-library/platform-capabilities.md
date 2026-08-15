@@ -1,148 +1,173 @@
 # Platform Capabilities
 
-------------------------------------------------------------------------
-Attribute                           Value
------------------------------------ -----------------------------------
-**Document Status**                 Published
+The AI Document Library is more than a document management system. It is
+an autonomous document intelligence platform designed to help organizations
+understand, verify, and continuously improve their knowledge.
 
-**Version**                         1.0
+Where the **Technical Library** explains **how** the platform is
+engineered, the **Platform Capabilities** collection explains **what**
+the platform enables organizations to accomplish.
 
-**Audience**                        Business Leaders, Product Managers,
-                                    Software Architects, Developers,
-                                    Technical Reviewers
+These documents describe the major capabilities built upon the
+platform's architectural foundation and demonstrate how information
+integrity, explainable artificial intelligence, deterministic
+traceability, and autonomous processing combine to solve real-world
+organizational problems.
 
-**Purpose**                         Describe the capabilities of the AI
-                                    Document Library platform and the
-                                    strategic direction for expanding
-                                    those capabilities over time.
-
-**Related Documents**               [Enterprise Architecture Specification](../../README.md),
-                                    [Design Philosophy](design-philosophy.md),
-                                    [Architectural Rationale](architectural-rationale.md),
-                                    [Canonical Schemas](schemas.md),
-                                    [Forensics Playbook](forensics-playbook.md)
 ------------------------------------------------------------------------
 
----
+## Purpose
 
-# Introduction
+The Platform Capabilities collection is intended for:
 
-The AI Document Library Version 1.0 delivers a complete platform for autonomous document ingestion, evidence management, explainable artificial intelligence, and knowledge preservation.
+-   Business Leaders
+-   Product Managers
+-   Project Managers
+-   Software Architects
+-   Developers
+-   Technical Reviewers
 
-This document describes the capabilities available today together with the long-term direction for expanding the platform. It is not a release schedule or feature backlog. Instead, it communicates the architectural vision that guides future platform growth while preserving the engineering principles established by Version 1.0.
+Its purpose is to demonstrate how the AI Document Library transforms
+project information into trustworthy organizational knowledge while
+preserving complete source and information lineage and explainable decision making.
 
----
+------------------------------------------------------------------------
 
-# Guiding Principles
+## Platform Today
 
-Platform growth is guided by several fundamental principles.
+Version 1.0 establishes a validated architectural and component
+foundation that includes:
 
-- Preserve evidence integrity.
-- Maintain explainable AI.
-- Protect deterministic evidence traceability.
-- Preserve backward compatibility whenever practical.
-- Allow autonomous services to evolve independently.
-- Expand capabilities without compromising architectural simplicity.
-- Build solutions that improve organizational knowledge and decision confidence.
+-   Autonomous platform runtime
+-   Multi-format document ingestion
+-   Canonical record architecture
+-   Source and information traceability
+-   Visual intelligence
+-   Communication and email intelligence
+-   Explainable AI responses
+-   Knowledge Evolution
+-   Answer accountability
+-   Cross-document relationship architecture
+-   Forensic investigation workflows
+-   Immutable artifact identity
 
-These principles remain constant regardless of future implementation technologies.
+The underlying component responsibilities have completed standalone
+Validation against real operational documentation and are currently
+being implemented within the unified autonomous platform.
 
----
+These capabilities form the validated architectural and component
+foundation of the AI Document Library.
 
-# Platform Today
+------------------------------------------------------------------------
 
-Version 1.0 currently provides:
+## Platform Growth
 
-- Autonomous platform runtime
-- Multi-format document ingestion
-- Canonical record architecture
-- Evidence traceability
-- Explainable AI responses
-- Answer accountability
-- Knowledge Evolution
-- Forensic investigation workflows
-- Cross-document relationship architecture
-- Immutable artifact identity
-- Autonomous reader architecture
-
-Together these capabilities establish the production foundation of the AI Document Library.
-
----
-
-# Platform Growth
-
-Future platform expansion focuses on extending the capabilities of Version 1.0 rather than redefining its architecture.
+Platform growth will extend the validated architectural foundation as
+the current Implementation phase progresses and as additional enterprise
+capabilities are introduced.
 
 Examples include:
 
-- Enterprise authentication and authorization
-- Executive dashboards
-- Enterprise administration tools
-- Notification and alerting services
-- Additional enterprise integrations
-- Enhanced workflow automation
-- Expanded reporting and analytics
+-   Enterprise authentication and authorization
+-   Executive dashboards
+-   Enterprise administration tools
+-   Notification and alerting services
+-   Additional enterprise integrations
+-   Expanded reporting and analytics
 
-These additions build upon the existing platform while preserving evidence integrity and explainable decision making.
+Future capabilities will build upon the existing architecture rather
+than redefine it.
 
----
+------------------------------------------------------------------------
 
-# Long-Term Vision
+## Long-Term Vision
 
-The long-term vision extends the platform beyond document intelligence toward enterprise knowledge intelligence.
+The long-term vision of the AI Document Library extends beyond document
+management toward enterprise knowledge intelligence.
 
 Future architectural direction includes:
 
-- Federated organizational knowledge
-- Cross-project intelligence
-- Multi-tenant deployment
-- Distributed processing
-- Enterprise-scale persistence
-- High-performance processing modules
-- Autonomous knowledge discovery
-- Continuous organizational learning
+-   Federated organizational knowledge
+-   Cross-project intelligence
+-   Multi-tenant deployment
+-   Distributed processing
+-   Enterprise-scale persistence
+-   High-performance processing modules
+-   Autonomous knowledge discovery
+-   Continuous organizational learning
 
-These capabilities represent the long-term evolution of the platform while maintaining the architectural principles established by Version 1.0.
+The objective is to create an autonomous intelligence platform that continuously
+transforms organizational information into trusted knowledge.
 
----
+------------------------------------------------------------------------
 
-# Technology Evolution
+## Capability Documents
 
-The AI Document Library is designed around architectural principles rather than specific technologies.
+Each document within this collection explores one major capability of
+the platform.
 
-As enterprise requirements evolve, implementation technologies may also evolve to support scalability, performance, interoperability, and maintainability.
+  ---------------------------------------------------------------------
+  Capability                        Description
+  --------------------------------- -----------------------------------
+  **Knowledge Evolution**           Explains how the platform preserves
+                                    historical answers, evaluates newly
+                                    introduced information, and explains
+                                    why conclusions change over time.
 
-Potential technology evolution includes:
+  **Operational Intelligence**      Describes how information,
+                                    observations, and relationships are
+                                    transformed into actionable
+                                    organizational insight.
 
-- Enterprise persistence platforms
-- Native high-performance processing modules
-- Distributed orchestration services
-- Enterprise authentication providers
-- Cloud-native deployment models
-- Scalable relationship graph technologies
+  **Information Impact Analysis**      Explains how newly discovered
+                                    information automatically identifies
+                                    affected conclusions and supporting
+                                    records.
 
-Technology decisions will continue to support the platform's architectural objectives without altering its core engineering philosophy.
+  **Notification Engine**           Describes intelligent notifications
+                                    generated when information changes
+                                    affect existing knowledge.
 
----
+  **Security and Access**           Describes the architecture for
+                                    enterprise authentication,
+                                    authorization, and controlled
+                                    access to sensitive organizational
+                                    information.
 
-# Vision
+  **Emerging Capabilities**         Describes future platform
+                                    directions that extend the
+                                    architectural foundation
+                                    established by Version 1.0.
+  ---------------------------------------------------------------------
 
-The long-term objective of the AI Document Library is not simply to answer questions about documents.
+------------------------------------------------------------------------
 
-Its purpose is to help organizations understand, preserve, and continuously improve their collective knowledge.
+## Relationship to the Technical Library
 
-By combining evidence integrity, explainable AI, deterministic traceability, and Knowledge Evolution, the platform transforms information into trustworthy organizational intelligence while maintaining complete transparency into how every conclusion is reached.
+The AI Document Library documentation is organized into two
+complementary collections.
 
----
+### Technical Library
 
-# Design Intent
+Explains how the platform is engineered.
 
-Version 1.0 establishes the core architectural foundation of the AI Document Library. Future platform growth extends that foundation through additional capabilities while preserving the engineering principles that define the platform.
+Topics include:
 
-Growth represents expansion—not completion of unfinished functionality.
+-   Design Philosophy
+-   Architectural Rationale
+-   Canonical Schemas
+-   Forensics Playbook
 
----
+### Platform Capabilities
+
+Explains what the platform enables organizations to accomplish.
+
+Together these collections provide both the engineering foundation and
+the operational value of the AI Document Library.
+
+------------------------------------------------------------------------
 
 Copyright © 2026 Joseph Contreras
 
-This document is part of the AI Document Library Platform Capabilities collection.
+This document is part of the AI Document Library Platform Capabilities
+collection.
