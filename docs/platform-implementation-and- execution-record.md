@@ -1,34 +1,34 @@
 # AI Document Library
 
-## Platform Execution, Integration, and Validation Record
+## Platform Implementation and Execution Record
 
 ### 1. Purpose
 
-The Platform Execution, Integration, and Validation phase represents the
+The Platform Implementation and Execution phase represents the
 transition of the AI Document Library from a collection of independently
 developed and validated components into a coordinated autonomous
 platform.
 
 This phase is not simply a record of software debugging.
 
-It documents how individually executable scripts were progressively
-integrated into a larger execution architecture, how real project
-artifacts continued to be ingested during that process, how outputs were
-inspected and validated, what problems were encountered, how those
-problems were classified and investigated, and how execution results
-influenced subsequent engineering decisions.
+It documents how individually executable and validated scripts were
+progressively implemented within a larger execution architecture, how
+real project artifacts continued to be ingested during that process, how
+outputs were inspected and validated, what problems were encountered,
+how those problems were classified and investigated, and how execution
+results influenced subsequent engineering decisions.
 
 An important objective of this record is to distinguish actual software
 defects from normal engineering activities such as removal of standalone
 test execution, elimination of temporary code, replacement of earlier
-architectural approaches, integration adjustments, environmental
+architectural approaches, implementation adjustments, environmental
 limitations, and findings discovered through output validation.
 
 The history of these encounters is part of the engineering record
 because the final platform architecture alone does not explain how its
 execution contracts and component boundaries were established.
 
-# 2. Transition From Development to Execution
+# 2. Transition From Validation to Platform Implementation
 
 The AI Document Library was not developed initially as one large
 executable application.
@@ -49,21 +49,21 @@ During development, a typical component could therefore be:
 5.  inspected for expected outputs;
 6.  corrected when necessary;
 7.  rerun;
-8.  validated before integration.
+8.  validated before platform implementation.
 
 This development strategy created an important separation between
 **functional independence** and **execution independence**.
 
-A component’s true architectural independence does not depend on whether
+A component's true architectural independence does not depend on whether
 it contains a standalone launcher.
 
 Its independence comes from having a defined responsibility, controlled
 inputs, defined outputs, traceable behavior, and a known relationship
 with upstream and downstream components.
 
-Once a component had been validated and connected to the autonomous
-platform, its independent test launcher could be removed without
-removing the independence of its core responsibility.
+Once a component had been validated and implemented within the
+autonomous platform, its independent test launcher could be removed
+without removing the independence of its core responsibility.
 
 # 3. Standalone Execution Was a Development Instrument
 
@@ -75,15 +75,15 @@ It was an engineering instrument.
 During development, standalone execution provided a controlled way to
 answer fundamental questions:
 
-- Does the script execute?
-- Does it accept the intended input?
-- Does it perform only its assigned responsibility?
-- Does it produce the intended output?
-- Is the output written to the correct location?
-- Can the output be inspected independently?
-- Does failure remain observable?
-- Can the component be validated before another component depends upon
-  it?
+-   Does the script execute?
+-   Does it accept the intended input?
+-   Does it perform only its assigned responsibility?
+-   Does it produce the intended output?
+-   Is the output written to the correct location?
+-   Can the output be inspected independently?
+-   Does failure remain observable?
+-   Can the component be validated before another component depends upon
+    it?
 
 Once these questions were sufficiently answered, the component could be
 connected to the larger platform.
@@ -94,26 +94,26 @@ desirable.
 The autonomous runtime and orchestration architecture became responsible
 for determining when and how the component should execute.
 
-Removal of standalone execution therefore represents an **integration
+Removal of standalone execution therefore represents an **Implementation
 milestone**, not a software correction.
 
-### Classification: Integration Cleanup — Not a Defect
+### Classification: Implementation Cleanup --- Not a Defect
 
 The standalone execution path served its intended development purpose by
 allowing a component to be executed, observed, and validated
 independently.
 
-Once the component’s responsibility and outputs were confirmed and the
+Once the component's responsibility and outputs were confirmed and the
 component was connected to the platform runtime, standalone launching
 could be retired.
 
-The component’s functional independence remained intact.
+The component's functional independence remained intact.
 
 Only its independent method of invocation was removed.
 
-# 4. Progressive Platform Integration
+# 4. Progressive Platform Implementation
 
-Integration was intentionally progressive.
+Implementation was intentionally progressive.
 
 Components were not assumed to work correctly merely because they
 executed successfully on their own.
@@ -123,17 +123,18 @@ boundary.
 
 Platform execution introduced another set of questions:
 
-- Does the upstream component provide the expected input?
-- Does the receiving component interpret that input correctly?
-- Are parameters passed consistently?
-- Are record identifiers preserved?
-- Are paths resolved by the appropriate layer?
-- Are queues produced and consumed correctly?
-- Are failures propagated correctly?
-- Does orchestration understand the component’s result?
-- Does the next component receive sufficient information to continue?
-- Does the resulting artifact maintain lineage to its source?
-- Does autonomous execution behave the same way as controlled execution?
+-   Does the upstream component provide the expected input?
+-   Does the receiving component interpret that input correctly?
+-   Are parameters passed consistently?
+-   Are record identifiers preserved?
+-   Are paths resolved by the appropriate layer?
+-   Are queues produced and consumed correctly?
+-   Are failures propagated correctly?
+-   Does orchestration understand the component's result?
+-   Does the next component receive sufficient information to continue?
+-   Does the resulting artifact maintain lineage to its source?
+-   Does autonomous execution behave the same way as controlled
+    execution?
 
 This distinction became increasingly important as reader managers,
 workers, queue preparation scripts, artifact records, metadata
@@ -141,8 +142,8 @@ processing, compatibility services, AI interfaces, runtime services, and
 orchestration logic became connected.
 
 A script could be completely valid within its own responsibility while
-still exposing an integration problem when connected to another
-component.
+still exposing an implementation-boundary problem when connected to
+another component.
 
 For this reason:
 
@@ -151,8 +152,8 @@ proof of platform validity.**
 
 # 5. Execution Became an Architecture Test
 
-As integration progressed, execution itself became one of the principal
-methods for testing the architecture.
+As Implementation progressed, execution itself became one of the
+principal methods for testing the architecture.
 
 Earlier development concentrated heavily on whether an individual
 component performed its responsibility.
@@ -165,19 +166,19 @@ standalone testing.
 
 Examples include:
 
-- mismatched function contracts;
-- unexpected parameter ownership;
-- output-directory responsibility;
-- queue lifecycle assumptions;
-- path-resolution assumptions;
-- stale temporary execution logic;
-- outdated development code;
-- missing orchestration connections;
-- inappropriate downstream compensation for upstream behavior;
-- incorrect failure propagation;
-- record lifecycle inconsistencies;
-- environmental capability limitations;
-- outputs that existed but did not contain the expected information.
+-   mismatched function contracts;
+-   unexpected parameter ownership;
+-   output-directory responsibility;
+-   queue lifecycle assumptions;
+-   path-resolution assumptions;
+-   stale temporary execution logic;
+-   outdated development code;
+-   missing orchestration connections;
+-   inappropriate downstream compensation for upstream behavior;
+-   incorrect failure propagation;
+-   record lifecycle inconsistencies;
+-   environmental capability limitations;
+-   outputs that existed but did not contain the expected information.
 
 These findings were not automatically classified as bugs.
 
@@ -195,46 +196,47 @@ fails because of an error in the implemented logic.
 
 Examples may include:
 
-- incorrect variable references;
-- incorrect conditions;
-- malformed records;
-- invalid transformations;
-- incorrect state handling;
-- implementation errors that prevent the component from fulfilling its
-  established contract.
+-   incorrect variable references;
+-   incorrect conditions;
+-   malformed records;
+-   invalid transformations;
+-   incorrect state handling;
+-   implementation errors that prevent the component from fulfilling its
+    established contract.
 
 These may appropriately be described as software bugs.
 
-## 6.2 Integration Issue
+## 6.2 Implementation Boundary Issue
 
-The individual components may operate correctly independently, but their
-connection does not conform to the expected interface or lifecycle.
+The individual components may operate correctly independently, but
+during Implementation their connection may not conform to the expected
+interface or lifecycle.
 
 Examples include:
 
-- parameter mismatch;
-- return-value mismatch;
-- incompatible input/output structures;
-- caller/callee assumptions;
-- incorrect queue handoff;
-- inconsistent path ownership;
-- orchestration invoking a valid component incorrectly.
+-   parameter mismatch;
+-   return-value mismatch;
+-   incompatible input/output structures;
+-   caller/callee assumptions;
+-   incorrect queue handoff;
+-   inconsistent path ownership;
+-   orchestration invoking a valid component incorrectly.
 
-An integration issue is not automatically evidence that either
-individual component was defective.
+An implementation-boundary issue is not automatically evidence that
+either individual component was defective.
 
 ## 6.3 Standalone Test Removal
 
 Development-only execution logic is removed after the component has been
-validated and integrated.
+validated and implemented within the platform.
 
 Examples include:
 
-- `if __name__ == "__main__"` execution blocks;
-- operator prompts used during testing;
-- direct test paths;
-- manually supplied test arguments;
-- diagnostic launch mechanisms.
+-   `if __name__ == "__main__"` execution blocks;
+-   operator prompts used during testing;
+-   direct test paths;
+-   manually supplied test arguments;
+-   diagnostic launch mechanisms.
 
 This is planned engineering cleanup.
 
@@ -253,10 +255,10 @@ introduced.
 
 The important questions are:
 
-- Why was it introduced?
-- What purpose did it serve?
-- What permanent capability replaced it?
-- Was it completely removed when no longer appropriate?
+-   Why was it introduced?
+-   What purpose did it serve?
+-   What permanent capability replaced it?
+-   Was it completely removed when no longer appropriate?
 
 ## 6.5 Legacy Code Cleanup
 
@@ -276,18 +278,18 @@ architectural evolution as repeated programming failure.
 Execution may expose a responsibility or interface that had never been
 sufficiently defined.
 
-This is particularly important during integration.
+This is particularly important during Implementation.
 
 The result may reveal questions such as:
 
-- Which component owns this directory?
-- Which component creates this record?
-- Who supplies this parameter?
-- Should the caller or callee determine this path?
-- Which layer is responsible for capability detection?
-- What should happen when no output is produced?
-- What constitutes successful execution?
-- Which component is responsible for recovery?
+-   Which component owns this directory?
+-   Which component creates this record?
+-   Who supplies this parameter?
+-   Should the caller or callee determine this path?
+-   Which layer is responsible for capability detection?
+-   What should happen when no output is produced?
+-   What constitutes successful execution?
+-   Which component is responsible for recovery?
 
 The resolution may require an architectural decision rather than a
 conventional bug fix.
@@ -299,14 +301,14 @@ lacks something required by the attempted path.
 
 Examples include:
 
-- unavailable software;
-- unavailable conversion capability;
-- inaccessible filesystem location;
-- network-path behavior;
-- permissions;
-- provider availability;
-- runtime configuration;
-- environmental dependency limitations.
+-   unavailable software;
+-   unavailable conversion capability;
+-   inaccessible filesystem location;
+-   network-path behavior;
+-   permissions;
+-   provider availability;
+-   runtime configuration;
+-   environmental dependency limitations.
 
 The legacy `.doc` investigation demonstrated the importance of
 distinguishing environmental capability from application logic.
@@ -318,13 +320,13 @@ validation.
 
 Examples include:
 
-- expected records are missing;
-- records exist but contain insufficient information;
-- output counts do not correspond with input expectations;
-- lineage is incomplete;
-- a directory remains empty;
-- an artifact is incorrectly classified;
-- extracted information does not represent the source adequately.
+-   expected records are missing;
+-   records exist but contain insufficient information;
+-   output counts do not correspond with input expectations;
+-   lineage is incomplete;
+-   a directory remains empty;
+-   an artifact is incorrectly classified;
+-   extracted information does not represent the source adequately.
 
 This led to an important execution principle:
 
@@ -343,8 +345,8 @@ What occurred during execution?
 
 ### 2. Classification
 
-Was the encounter an actual defect, integration issue, test cleanup,
-temporary implementation cleanup, legacy cleanup, architecture
+Was the encounter an actual defect, implementation-boundary issue, test
+cleanup, temporary implementation cleanup, legacy cleanup, architecture
 discovery, environmental issue, or validation finding?
 
 ### 3. Observable Result
@@ -353,15 +355,15 @@ What was actually observed?
 
 This may include:
 
-- exception;
-- console output;
-- missing record;
-- unexpected directory contents;
-- incorrect count;
-- queue behavior;
-- incomplete output;
-- platform stop reason;
-- telemetry or metrics.
+-   exception;
+-   console output;
+-   missing record;
+-   unexpected directory contents;
+-   incorrect count;
+-   queue behavior;
+-   incomplete output;
+-   platform stop reason;
+-   telemetry or metrics.
 
 ### 4. Investigation
 
@@ -391,9 +393,9 @@ This final step is important because some of the most valuable execution
 encounters resulted in improvements to the architecture rather than
 merely corrections to code.
 
-# 8. Real Project Ingestion Continued During Integration
+# 8. Real Project Ingestion Continued During Implementation
 
-Integration was not isolated from the actual document environment the
+Implementation was not isolated from the actual document environment the
 platform was being designed to understand.
 
 Real project information continued to be introduced and processed while
@@ -410,7 +412,8 @@ evidence.
 Synthetic test data alone could not expose all of the conditions present
 within those repositories.
 
-Real project ingestion therefore became part of platform validation.
+Real project ingestion therefore continued to provide execution evidence
+during platform Implementation.
 
 As additional artifacts moved through the system, new conditions were
 encountered.
@@ -422,17 +425,17 @@ Others exposed gaps.
 Others demonstrated that an output could technically be produced while
 still being insufficient for the intended knowledge system.
 
-# 9. Continuous Ingestion and Validation Cycle
+# 9. Continuous Ingestion and Implementation Evaluation Cycle
 
 The execution phase developed into a recurring engineering cycle:
 
-**Ingest → Execute → Observe → Inspect → Validate → Investigate →
-Classify → Correct or Clean Up → Re-execute → Validate Again**
+**Ingest → Execute → Observe → Inspect → Evaluate → Investigate →
+Classify → Correct or Clean Up → Re-execute → Evaluate Again**
 
 When necessary, another step occurred:
 
 **Discuss → Reconsider Responsibility → Make Architecture Decision →
-Integrate Decision → Re-execute**
+Implement Decision → Re-execute**
 
 This means that development did not proceed according to the assumption
 that all architecture had been completely solved before execution began.
@@ -440,34 +443,34 @@ that all architecture had been completely solved before execution began.
 Instead, execution supplied evidence about whether architectural
 decisions worked under actual operating conditions.
 
-# 10. Validation Beyond Exceptions
+# 10. Output Evaluation Beyond Exceptions
 
 One of the recurring lessons of this phase was that the absence of a
 Python exception does not mean the system performed correctly.
 
 A script can return successfully while:
 
-- creating no records;
-- creating records in the wrong location;
-- omitting expected fields;
-- losing lineage;
-- producing an empty queue;
-- processing fewer artifacts than expected;
-- creating structurally valid but operationally useless output.
+-   creating no records;
+-   creating records in the wrong location;
+-   omitting expected fields;
+-   losing lineage;
+-   producing an empty queue;
+-   processing fewer artifacts than expected;
+-   creating structurally valid but operationally useless output.
 
-For this reason, platform validation increasingly included examination
-of filesystem output, JSON records, queues, metrics, artifact counts,
-record relationships, and downstream behavior.
+For this reason, Implementation evaluation increasingly included
+examination of filesystem output, JSON records, queues, metrics,
+artifact counts, record relationships, and downstream behavior.
 
 The question changed from:
 
-**“Did the script run?”**
+**"Did the script run?"**
 
 to:
 
-**“Did the platform produce the result that this component is
-responsible for producing, and can that result be traced and
-validated?”**
+**"Did the platform produce the result that this component is
+responsible for producing, and can that result be traced and evaluated
+against its expected responsibility?"**
 
 # 11. Temporary Code and Engineering Evolution
 
@@ -478,19 +481,19 @@ Temporary does not necessarily mean accidental.
 
 During iterative engineering, temporary mechanisms can provide:
 
-- observability;
-- diagnostic execution;
-- controlled testing;
-- transitional compatibility;
-- proof of capability;
-- isolation of a responsibility;
-- confirmation of an architectural hypothesis.
+-   observability;
+-   diagnostic execution;
+-   controlled testing;
+-   transitional compatibility;
+-   proof of capability;
+-   isolation of a responsibility;
+-   confirmation of an architectural hypothesis.
 
 Problems arise when temporary mechanisms survive beyond the point where
 the permanent architecture has replaced them.
 
-The execution/integration phase therefore included deliberate
-identification and removal of temporary code.
+The Implementation phase therefore included deliberate identification
+and removal of temporary code.
 
 This cleanup should be recorded separately from defect correction.
 
@@ -506,13 +509,13 @@ file.
 
 The platform needed to preserve:
 
-- original artifact identity;
-- source traceability;
-- extraction records;
-- derivative relationships;
-- independent reading paths;
-- verification opportunities;
-- compatibility with autonomous execution.
+-   original artifact identity;
+-   source traceability;
+-   extraction records;
+-   derivative relationships;
+-   independent reading paths;
+-   verification opportunities;
+-   compatibility with autonomous execution.
 
 During investigation, several possible mechanisms were examined.
 
@@ -528,33 +531,33 @@ derivative DOCX/PDF paths, and cross-path verification was therefore not
 an arbitrary technology selection.
 
 It emerged from execution, investigation, environmental constraints, and
-the platform’s traceability requirements.
+the platform's traceability requirements.
 
 Unsuccessful approaches should therefore remain part of the engineering
 history when they explain why the final architecture exists.
 
-# 13. Reader Architecture and Integration
+# 13. Reader Architecture and Implementation
 
 Reader services further demonstrated the distinction between standalone
-validity and platform integration.
+Validation and platform Implementation.
 
 Reader-related responsibilities were progressively separated among
 components such as:
 
-- reader registry;
-- queue preparation;
-- reader manager;
-- reader worker;
-- reader job claiming;
-- heartbeat;
-- job recovery;
-- execution verification;
-- format-specific readers.
+-   reader registry;
+-   queue preparation;
+-   reader manager;
+-   reader worker;
+-   reader job claiming;
+-   heartbeat;
+-   job recovery;
+-   execution verification;
+-   format-specific readers.
 
 Individual components could first be tested within their defined
 boundaries.
 
-Integration then tested the larger lifecycle:
+Implementation then exercised the larger execution lifecycle:
 
 **Artifact → Queue → Manager → Worker → Claim → Reader → Output →
 Verification**
@@ -604,25 +607,26 @@ does, but why a responsibility was assigned to a particular component.
 
 Important recurring questions included:
 
-- Should this responsibility belong upstream or downstream?
-- Is this a component failure or a caller failure?
-- Is this code temporary or permanent?
-- Is this standalone capability still required?
-- Is this result actually valid?
-- Is the platform compensating for a problem in the wrong layer?
-- Does this change violate provider neutrality?
-- Does this introduce operating-system assumptions?
-- Does this preserve artifact identity?
-- Can the result be traced to its source?
-- Are we solving the observed problem or merely suppressing the symptom?
+-   Should this responsibility belong upstream or downstream?
+-   Is this a component failure or a caller failure?
+-   Is this code temporary or permanent?
+-   Is this standalone capability still required?
+-   Is this result actually valid?
+-   Is the platform compensating for a problem in the wrong layer?
+-   Does this change violate provider neutrality?
+-   Does this introduce operating-system assumptions?
+-   Does this preserve artifact identity?
+-   Can the result be traced to its source?
+-   Are we solving the observed problem or merely suppressing the
+    symptom?
 
 These discussions became part of architecture development.
 
 # 16. Responsibility Over Convenience
 
-A recurring principle during integration was that a component should not
-acquire another component’s responsibility merely because doing so would
-make an immediate execution problem easier to solve.
+A recurring principle during Implementation was that a component should
+not acquire another component's responsibility merely because doing so
+would make an immediate execution problem easier to solve.
 
 Allowing downstream scripts to compensate for missing upstream
 responsibilities can make the system appear to work while weakening
@@ -666,13 +670,13 @@ Earlier testing concentrated on whether individual scripts worked.
 The platform can now generate execution evidence about the behavior of
 an orchestration cycle itself.
 
-These metrics provide another validation layer for determining:
+These metrics provide another execution-evidence layer for determining:
 
-- what executed;
-- what occurred during a cycle;
-- where execution stopped;
-- what the platform believed its status to be;
-- whether additional investigation is required.
+-   what executed;
+-   what occurred during a cycle;
+-   where execution stopped;
+-   what the platform believed its status to be;
+-   whether additional investigation is required.
 
 # 18. Encounter and Resolution Log
 
@@ -680,11 +684,11 @@ The following log is intended to grow as historical execution encounters
 are reconstructed and as new encounters occur.
 
 Each entry should preserve the distinction between software defects and
-normal integration activity.
+normal Implementation activity.
 
 ## Encounter: Standalone Execution Removal
 
-**Classification:** Integration Cleanup — Not a Defect
+**Classification:** Implementation Cleanup --- Not a Defect
 
 **Encounter:** Components previously capable of direct execution were
 progressively incorporated into autonomous platform execution.
@@ -692,8 +696,8 @@ progressively incorporated into autonomous platform execution.
 **Cause:** Standalone launch mechanisms were intentionally provided for
 development and validation.
 
-**Resolution:** Standalone execution was removed after integration where
-it was no longer architecturally required.
+**Resolution:** Standalone execution was removed during Implementation
+where it was no longer architecturally required.
 
 **Validation:** Components were subsequently exercised through their
 intended caller or platform execution path.
@@ -703,7 +707,7 @@ distinguished from independent launching.
 
 ## Encounter: Temporary Development Code
 
-**Classification:** Temporary Implementation Cleanup — Not a Defect
+**Classification:** Temporary Implementation Cleanup --- Not a Defect
 Unless the Temporary Code Causes Unintended Runtime Behavior
 
 **Encounter:** Earlier implementation paths contained code introduced
@@ -745,6 +749,42 @@ platform.
 **Resolution and Validation:** To be completed from the corresponding
 execution record rather than reconstructed from assumption.
 
+## Encounter: Execution Sequence and Parallel Branch Reconstruction
+
+**Classification:** Implementation Knowledge and Orchestration Discovery
+--- Not a Component Defect
+
+**Encounter:** During platform Implementation, the growing number of
+previously validated scripts, sequential handoffs, and parallel
+processing branches made the intended execution order difficult to
+reconstruct reliably from memory.
+
+**Observable Result:** Determining the correct platform sequence
+required returning to the engineering notebooks and historical
+development records to recover the intended order of execution, parallel
+branch relationships, and downstream handoffs.
+
+**Cause:** The individual component responsibilities had been preserved
+and validated, but the larger execution sequence and parallel branch
+relationships had evolved across development and were not reliably
+recoverable from memory alone.
+
+**Resolution:** Engineering notebooks and historical records were used
+to reconstruct the intended execution sequence and confirm the
+relationships between sequential and parallel branches before continuing
+Implementation.
+
+**Architectural Consequence:** Component responsibility and component
+validity are not sufficient to preserve system-level execution
+knowledge. Execution order, parallel branch relationships, dependencies,
+and handoff points must also be explicitly preserved as part of the
+orchestration and engineering record.
+
+This encounter also demonstrated the operational value of the
+Engineering Notebook. The notebook was not merely a development journal;
+it preserved design intent that could be used to reconstruct platform
+execution when human memory was insufficient.
+
 # 19. Future Encounter Recording
 
 Future failures and unexpected results should not immediately be
@@ -759,18 +799,19 @@ event.
 
 This prevents normal architecture evolution from being confused with
 poor implementation quality and prevents genuine defects from being
-hidden behind vague descriptions such as “integration problem.”
+hidden behind vague descriptions such as "implementation problem."
 
 # 20. What This Phase Demonstrated
 
-The execution phase demonstrated that building the components and
-building the platform are related but different engineering problems.
+The Implementation and execution phase demonstrated that building the
+components and building the platform are related but different
+engineering problems.
 
 Standalone development helped establish:
 
 **Can this responsibility work?**
 
-Integration asked:
+Implementation asked:
 
 **Can these responsibilities work together?**
 
@@ -792,12 +833,12 @@ for its intended purpose, and traceable to its source?**
 These questions progressively increased the standard of evidence
 required before considering a capability complete.
 
-# 21. Continuing Execution Phase
+# 21. Continuing Implementation Phase
 
-The Platform Execution, Integration, and Validation phase remains
-active.
+The Platform Implementation and Execution phase remains active.
 
-Additional scripts still require integration, cleanup, or validation.
+Additional previously validated scripts still require Implementation,
+connection cleanup, or applicable retesting.
 
 Additional project artifacts will continue to expose conditions that
 cannot necessarily be anticipated through isolated testing.
@@ -812,7 +853,7 @@ The purpose is not to create a record showing that development proceeded
 without problems.
 
 The purpose is to create a record showing that problems, unexpected
-behavior, temporary mechanisms, integration discoveries, and
+behavior, temporary mechanisms, Implementation discoveries, and
 architectural questions were made observable, investigated, classified,
 resolved appropriately, and used to improve the platform.
 
