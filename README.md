@@ -6,7 +6,7 @@ The **AI Document Library** is an eco619 platform for transforming complex colle
 
 The platform is designed around a fundamental engineering question:
 
-> **"How did I miss this?"**
+**"How did I miss this?"**
 
 Important information frequently already exists. The problem is that it may be distributed across emails, reports, drawings, photographs, handwritten annotations, legacy documents, attachments, revisions, and years of historical project records.
 
@@ -514,7 +514,7 @@ AI remains a replaceable capability within the architecture.
 
 A central platform principle is:
 
-> **Extraction does not equal verification.**
+**Extraction does not equal verification.**
 
 Successfully reading information from an artifact establishes that information was extracted. It does not automatically establish completeness, accuracy, coverage, or evidentiary reliability.
 
@@ -575,7 +575,7 @@ A user's interaction with the AI layer should not provide broader access than th
 
 ### Authorization Inheritance
 
-> **AI-assisted retrieval and generated responses must respect the access boundaries governing their underlying source information.**
+**AI-assisted retrieval and generated responses must respect the access boundaries governing their underlying source information.**
 
 This principle is intended to prevent AI from becoming an alternative path around established organizational permissions.
 
@@ -845,4 +845,4 @@ Access to proprietary implementation details or source code may be provided unde
 
 ---
 
-> **Technology should strengthen human judgment—never replace it.**
+**Technology should strengthen human judgment—never replace it.**
