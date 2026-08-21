@@ -7,6 +7,13 @@
 
 ---
 
+## Controlled Execution Video
+
+https://github.com/user-attachments/assets/be339b45-5df4-4e19-ba6d-0f1c520bca7c
+
+**Video:** Controlled multi-format execution of the implemented autonomous platform. Playback is accelerated to 4× to make the processing sequence observable within a shorter demonstration. The video contains no narration or audio.
+
+---
 ## Purpose
 
 This video documents a controlled execution of the AI Document Library after the independently developed and validated processing components were integrated into a singular autonomous platform.
