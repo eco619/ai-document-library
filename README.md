@@ -1,6 +1,6 @@
 # AI Document Library
 
-**An autonomous document intelligence platform engineered to preserve evidence, connect information, verify what it knows, and evolve knowledge as new evidence becomes available.**
+**An autonomous document intelligence platform engineered to preserve information, connect context, verify what it knows, and evolve knowledge as new information becomes available.**
 
 The **AI Document Library** is an eco619 platform for transforming complex collections of operational information into traceable, verifiable, and evolving organizational knowledge.
 
