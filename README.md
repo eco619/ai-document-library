@@ -1,828 +1,1134 @@
-# AI Document Library
+# Continuous Intelligence Platform
 
-**An autonomous document intelligence platform engineered to preserve information, connect context, verify what it knows, and evolve knowledge as new information becomes available.**
+**Formerly developed as the AI Document Library**
 
-The **AI Document Library** is an eco619 platform for transforming complex collections of operational information into traceable, verifiable, and evolving organizational knowledge.
+**An autonomous, provider-agnostic information-intelligence platform engineered to preserve authoritative source information, establish artifact identity and lineage, execute specialized processing through governed handoffs, verify what it knows, connect information across artifacts and time, and evolve organizational knowledge as new information becomes available.**
 
-The platform is designed around a fundamental engineering question:
+The **Continuous Intelligence Platform** is an eco619 research and engineering platform for transforming fragmented operational information into traceable, verifiable, and evolving organizational knowledge.
 
-**"How did I miss this?"**
+The platform began with a fundamental engineering question:
 
-Important information frequently already exists. The problem is that it may be distributed across emails, reports, drawings, photographs, handwritten annotations, legacy documents, attachments, revisions, and years of historical project records.
+> **How did I miss this?**
 
-The AI Document Library is being engineered to reconnect those relationships without sacrificing source identity, chronology, provenance, structure, or verification boundaries.
+Important information frequently already exists. The failure is often not absence of information, but fragmentation: emails, attachments, reports, spreadsheets, drawings, photographs, handwritten markups, legacy files, revisions, project records, and later information may each contain only part of the operational picture.
 
-Artificial intelligence is a capability within the platform—not the foundation upon which evidence integrity depends.
+The platform is engineered to preserve those sources as authoritative artifacts, recover their usable information without replacing the originals, maintain provenance across derived records, connect relationships among artifacts and events, and preserve the reasoning path by which information becomes organizational knowledge.
+
+Artificial intelligence is a capability within the architecture. It is not the authority that establishes source identity, provenance, execution integrity, or verification state.
 
 ---
 
-## Implementation Verification
+## Platform Naming & Repository Continuity
 
-The AI Document Library has reached the stage where its independently developed processing components are operating together as a singular autonomous platform.
+The platform was originally developed under the name **AI Document Library**.
+
+As the architecture expanded beyond document reading into autonomous execution, artifact intelligence, relationship reconstruction, continuous information ingestion, governed question-and-answer records, knowledge evolution, and future native technical-information processing, **Continuous Intelligence Platform** became the more accurate name.
+
+References to **AI Document Library** in earlier engineering documentation, demonstrations, development records, repository paths, script identifiers, and publications refer to the same platform under its former name.
+
+The GitHub repository name and historical implementation identifiers may continue to use `ai-document-library` where changing them would add no architectural value or would unnecessarily break continuity with existing development history.
+
+---
+
+## Current Engineering State — Implementation Verification
+
+The platform has progressed beyond isolated component development.
+
+Major responsibilities were developed and validated independently before being connected into a singular autonomous execution environment. The current implementation contains explicit orchestration, project intake, artifact registration, format identification, specialized reader queues, parallel reader supervision, job claiming, heartbeats, abandoned-job recovery, reader-execution verification, derivative processing, embedded-artifact routing, metadata and artifact review, OCR, visual processing, summaries, observations, relationships, and downstream knowledge-record responsibilities.
+
+Current engineering work is focused on **implementation verification**: executing the integrated platform against real project information, verifying handoffs between independently developed responsibilities, identifying whether failures originate in a component, configuration, execution boundary, queue, orchestration path, or downstream contract, and correcting demonstrated defects without casually redefining validated responsibilities.
 
 A controlled multi-format execution has been recorded to make the implemented processing sequence directly observable.
 
 **▶ [Watch the Autonomous Platform — Controlled Implementation Verification](docs/implementation-verification/autonomous-platform-controlled-execution.md)**
 
-The verification record includes the execution video and documents the processing sequence, verification paths, visual communication interpretation, artifact relationships, and provider-independent AI architecture demonstrated during the controlled test.
-
-Broader multi-project historical-data validation follows this implementation milestone.
-
----
-
-## Current Development Status — Active Integration
-
-The AI Document Library has progressed beyond individual component development into **system-level integration**.
-
-Core platform foundations, autonomous project discovery, artifact registration, multi-format reader services, reader orchestration, verification workflows, metadata processing, communication processing, visual processing—including handwritten and non-textual evidence—and AI integration have been implemented and validated through staged testing.
-
-A substantial portion of these previously independent capabilities now operates through a unified autonomous runtime.
-
-Current development is focused on integrating the remaining specialized processing, format-learning, governance, relationship, and knowledge capabilities into that runtime, followed by complete end-to-end platform validation.
-
-**Active Integration** therefore represents a working platform undergoing controlled system integration—not an early-stage architecture proposal.
+Broader historical-project execution and end-to-end validation continue as implementation verification expands.
 
 ---
 
 ## About This Repository
 
-The AI Document Library is part of the **eco619** platform ecosystem.
+This repository documents the engineering architecture and methodology of the **Continuous Intelligence Platform**.
 
-This repository documents the platform's:
+It describes:
 
-- architecture;
-- engineering methodology;
-- responsibility boundaries;
-- validation and verification approach;
-- evidence and provenance model;
-- autonomous processing architecture;
-- knowledge architecture; and
+- architectural responsibilities and boundaries;
+- autonomous execution and orchestration;
+- canonical artifact and derivative-record responsibilities;
+- specialized reader and recovery architecture;
+- verification and provenance;
+- visual and communication intelligence;
+- relationship and knowledge architecture;
+- continuous knowledge evolution;
+- governance and accountability;
+- provider-agnostic AI integration;
+- current implementation boundaries; and
 - strategic technical direction.
 
-The proprietary production implementation, including runtime source code, specialized readers, processing logic, orchestration services, AI integration components, and production prompt libraries, is maintained separately.
+The proprietary production implementation—including production runtime source, specialized processing logic, orchestration internals, provider configuration, production prompt libraries, and deployment-specific configuration—is maintained separately.
 
-The objective of this repository is to make the engineering architecture understandable and technically reviewable without exposing the private production implementation.
+The purpose of this repository is to make the architecture technically reviewable without publishing the private production implementation.
 
 ---
 
-## Architectural Objective
+# Architectural Objective
 
-The AI Document Library is not designed merely to search documents or generate answers from them.
+The Continuous Intelligence Platform is not a document search engine, a generic RAG wrapper, or a collection of file parsers.
 
-It is designed to maintain a traceable chain between:
+Its objective is to maintain a traceable chain from authoritative source information through processing, verification, relationship construction, questions, answers, and later knowledge evolution.
 
-```text id="gngv02"
-Source Artifact
-      │
-      ▼
-Artifact Identity
-      │
-      ▼
-Reading / Extraction
-      │
-      ▼
-Validation / Verification
-      │
-      ▼
-Metadata & Relationships
-      │
-      ▼
-Observations
-      │
-      ▼
-Evidence
-      │
-      ▼
-Questions & Answers
-      │
-      ▼
-Knowledge
-      │
-      ▼
-Future Evidence
-      │
-      ▼
-Knowledge Evolution
+```text
+Authoritative Source
+        │
+        ▼
+Project / Intake Context
+        │
+        ▼
+Canonical Artifact Identity
+        │
+        ▼
+Format Identification
+        │
+        ▼
+Specialized Processing
+        │
+        ▼
+Execution Verification
+        │
+        ▼
+Derived / Recovery Records
+        │
+        ▼
+Coverage / Source Verification
+        │
+        ▼
+Metadata / Visual / Communication Intelligence
+        │
+        ▼
+Observations / Entities / Relationships
+        │
+        ▼
+Question + Source-Support Snapshot
+        │
+        ▼
+Answer Record
+        │
+        ▼
+New Information Arrives
+        │
+        ▼
+Relevance / Knowledge-Evolution Evaluation
+        │
+        ├── Reaffirm
+        ├── Refine
+        ├── Strengthen
+        ├── Weaken
+        └── Challenge
+        │
+        ▼
+Evolved Knowledge
 ```
 
-Every stage has a distinct responsibility.
+Each responsibility remains distinguishable.
 
-Extraction does not automatically become verified evidence. AI interpretation does not replace source records. New conclusions do not erase the reasoning that preceded them.
+Extraction does not equal verification.  
+A derivative does not replace its source.  
+AI interpretation does not become source evidence.  
+A successful process does not prove a successful handoff.  
+A new answer does not erase the prior answer or the information state that produced it.
 
 ---
 
-## Six-Layer Platform Architecture
+# Architecture: Separated Responsibility Domains
 
-The platform is organized around six primary architectural layers.
+The current implementation is better represented as a set of **separated architectural responsibility domains** than as the earlier six-layer description.
 
-### Layer 1 — Platform Foundation
+These domains are not arbitrary application tiers. They represent independently owned responsibilities and explicit handoff boundaries visible in the implementation.
 
-Provides the common execution foundation required by the rest of the platform.
+## 1. Platform Foundation, Configuration & Runtime
+
+Provides common execution infrastructure without absorbing the responsibilities of downstream components.
 
 Responsibilities include:
 
-- configuration;
-- runtime initialization;
-- project discovery;
+- platform configuration;
+- canonical project-path resolution;
+- runtime-directory creation;
+- run and cycle identity;
 - compatibility boundaries;
-- canonical record definitions;
-- AI abstraction; and
-- autonomous execution control.
+- AI abstraction;
+- worker-capacity configuration;
+- execution metrics;
+- platform launch;
+- orchestration entry points; and
+- controlled autonomous execution.
 
-The foundation is designed to avoid unnecessary environment assumptions and hardcoded project dependencies.
+The foundation is designed to avoid project-specific hard-coding and unnecessary environment assumptions.
 
 ---
 
-### Layer 2 — Artifact Intelligence
+## 2. Project Discovery & Intake Assessment
 
-Establishes authoritative identity for information entering the platform.
+Establishes the authorized project context that enters platform execution.
 
 Responsibilities include:
 
-- artifact discovery;
-- registration;
-- immutable identifiers;
-- source preservation;
-- file-type identification;
-- metadata capture;
-- duplicate awareness;
-- lifecycle state; and
-- lineage establishment.
+- project discovery through established project-path services;
+- intake context;
+- project-level assessment;
+- source-location handoff;
+- project identity;
+- intake records; and
+- explicit downstream registry requests.
 
-An artifact remains authoritative even when later processing creates summaries, OCR records, visual interpretations, converted derivatives, or other downstream records.
+Intake does not perform specialized reading or recreate downstream artifact-processing responsibilities.
 
 ---
 
-### Layer 3 — Reader & Recovery Services
+## 3. Artifact Identity, Registration & Source Preservation
 
-Provides specialized reading capabilities while maintaining common execution and verification boundaries.
+Creates the canonical identity of information entering the platform.
 
-Current reader architecture includes support for processing such as:
+Responsibilities include:
+
+- artifact discovery within authorized project scope;
+- immutable artifact identifiers;
+- physical source preservation;
+- hashing and source characteristics;
+- file-type evidence;
+- canonical artifact records;
+- parent/child lineage;
+- lifecycle state;
+- manifest construction; and
+- provenance establishment.
+
+The authoritative artifact remains the source of record even when later processing creates extracted text, OCR, visual analysis, summaries, observations, derivatives, or AI-generated records.
+
+---
+
+## 4. Format Intelligence, Unknown-Format Resolution & Governed Learning
+
+Format identification is a separate responsibility from content interpretation.
+
+The implementation includes a governed path for unresolved or unsupported formats:
+
+```text
+Canonical Artifact
+      │
+      ▼
+Physical Format Evidence
+      │
+      ▼
+Supplemental Format Identification
+      │
+      ├── Existing Governed Format Knowledge
+      ├── Structural Inspection
+      ├── Supplemental Detectors
+      └── Independent Evidence
+      │
+      ▼
+Format-Knowledge Verification
+      │
+      ├── Supported Determination
+      │
+      └── HITL Escalation when required
+      │
+      ▼
+Governance Approval
+      │
+      ▼
+Versioned Format Knowledge
+```
+
+Human classification is not automatically promoted into reusable platform knowledge. Governed format knowledge is preserved as versioned system knowledge only after the applicable verification and approval boundary.
+
+---
+
+## 5. Reader Capability, Queue Construction & Routing
+
+Reader capability is separated from reader execution.
+
+Format-specific queue builders determine eligible work and create governed reader jobs for specialized processing paths such as:
 
 - PDF;
 - DOCX;
 - legacy DOC;
-- **email / MSG and associated attachments**;
-- OCR;
-- images and visual records;
-- metadata; and
-- specialized or recoverable content.
+- XLS;
+- XLSX;
+- MSG/email;
+- OCR; and
+- other supported or recovered formats.
 
-Reader orchestration coordinates:
+Queue construction does not execute the reader.
 
-- queue preparation;
-- worker execution;
-- job claiming;
-- heartbeat monitoring;
-- failure recovery;
-- completion state; and
-- execution verification.
+Routing does not redefine reader capability.
 
-Whole-document processing is preferred. Alternative or recovery paths are used when authoritative content cannot be obtained through the primary reading path.
-
-**Information obtained through an alternative or recovery path is not accepted solely because extraction succeeded. It remains subject to validation and verification before it can become trusted downstream information.**
-
-Verification evaluates the recovered result against available source characteristics, document coverage, extraction evidence, and independent or alternative processing paths where available, while preserving the lineage of both the original attempt and the recovered result.
-
-Successful recovery therefore establishes that additional information was obtained. It does not, by itself, establish that the information is sufficiently complete, accurate, or reliable for trusted downstream use.
+This separation allows the platform to know **what work exists** independently from **which worker executes it**.
 
 ---
 
-## Whole-Document Preservation
+## 6. Autonomous Reader Execution & Supervision
 
-The AI Document Library does not treat document parsing into isolated text fragments as its authoritative information model.
+The reader subsystem is an autonomous execution architecture rather than a synchronous chain of parser calls.
 
-The authoritative artifact remains the foundation of the processing chain.
+The implementation separates:
 
-Processing is designed to preserve, where available:
+- reader capability registration;
+- queue discovery;
+- worker-pool supervision;
+- atomic job claiming;
+- specialized reader routing;
+- worker heartbeat;
+- claim heartbeat;
+- completion/failure recording;
+- abandoned-job recovery;
+- worker shutdown control; and
+- independent execution verification.
 
+Default worker capacity is configurable; the current manager implementation supports a configurable parallel worker pool.
+
+```text
+Reader Queues
+     │
+     ▼
+Reader Manager
+     │
+     ├── Worker 1 ──► Atomic Claim ──► Specialized Reader
+     ├── Worker 2 ──► Atomic Claim ──► Specialized Reader
+     ├── Worker 3 ──► Atomic Claim ──► Specialized Reader
+     └── ...
+                         │
+                         ▼
+                  Reader Output Record
+                         │
+                         ▼
+                 Execution Verification
+```
+
+A heartbeat is diagnostic evidence of worker liveness. It is not proof that an artifact was successfully processed.
+
+Reader execution verification evaluates the actual chain:
+
+```text
+Queue Job → Claim Attempt → Specialized Reader Output
+```
+
+---
+
+## 7. Recovery, Derivatives, Embedded Artifacts & Forward Routing
+
+Recovery is governed separately from normal reading.
+
+The platform can create derivative processing paths when the authoritative source cannot be sufficiently interpreted through the primary path. Derivatives remain linked to the authoritative artifact and do not replace it.
+
+The implementation also recognizes that one artifact can contain additional meaningful artifacts.
+
+Embedded-artifact processing can:
+
+- inspect supported container artifacts;
+- recover meaningful embedded user content;
+- create governed child artifact records;
+- preserve parent/child lineage;
+- maintain physical source references for recovered children; and
+- route child artifacts forward into the appropriate existing reader queue.
+
+Child artifacts are not sent backward through intake merely because they were discovered later.
+
+This preserves **forward-only execution** and avoids duplicating responsibilities already completed upstream.
+
+---
+
+## 8. Artifact Review, Metadata, Coverage & Verification
+
+Successful extraction is not equivalent to trusted information.
+
+The platform contains distinct responsibilities for:
+
+- metadata processing;
+- artifact review;
+- tamper-aware review;
+- extraction verification;
+- reader-execution verification;
+- document coverage;
+- source support;
+- cross-path comparison;
+- recovery verification; and
+- downstream verification state.
+
+Verification evaluates the evidence available for the artifact and processing path rather than assuming that successful execution establishes completeness or reliability.
+
+---
+
+## 9. Visual Intelligence, Context & Recovery
+
+Visual information is treated as information-bearing content with its own processing responsibilities.
+
+The implementation includes responsibilities for:
+
+- visual artifact classification;
+- visual reading;
+- visual-object analysis;
+- visual context discovery;
+- context grouping;
+- verified visual context;
+- recovery prioritization;
+- recovery queues;
+- region construction;
+- markup-context recovery;
+- visual recovery;
+- visual analysis; and
+- visual verification.
+
+Relevant visual information can include:
+
+- drawings;
+- photographs;
+- scanned pages;
+- handwritten notes;
+- annotations;
+- circles;
+- arrows;
+- directional indicators;
+- markups;
+- diagrams;
+- symbols; and
+- other non-textual information.
+
+The objective is not merely image description. Visual processing must preserve the relationship between an interpretation, the location/context in which the information appeared, and the authoritative artifact from which it originated.
+
+---
+
+## 10. AI & Semantic Information Processing
+
+AI enters through defined provider-independent boundaries.
+
+AI-assisted responsibilities can include:
+
+- summarization;
+- observation generation;
+- contextual interpretation;
+- entity identification;
+- relationship discovery;
+- communication analysis;
+- visual interpretation;
+- question/answer support; and
+- other higher-order analysis.
+
+AI-generated information remains distinguishable from deterministic source records, reader outputs, verification records, and governance records.
+
+The architecture is not dependent on a single AI provider or model.
+
+```text
+Platform Responsibility
+        │
+        ▼
+AI Integration Boundary
+        │
+        ├── Provider / Model A
+        ├── Provider / Model B
+        ├── Local Model
+        └── Future Provider
+```
+
+Provider replacement must not require redesign of artifact identity, provenance, reader execution, verification, relationship, or knowledge responsibilities.
+
+---
+
+## 11. Observation, Entity, Relationship & Investigation Intelligence
+
+Higher-level organizational intelligence depends on relationships, not isolated extracted text.
+
+The platform maintains separate responsibilities for:
+
+- observation records;
+- entity records;
+- relationship records;
+- relationship registries;
+- relationship repair/migration;
+- investigation indexes; and
+- lineage among source and derived records.
+
+Conceptually:
+
+```text
+Artifact
+   │
+   ├── Person / Organization
+   ├── Communication
+   ├── Event
+   ├── Decision
+   ├── Related Artifact
+   ├── Observation
+   ├── Entity
+   └── Relationship
+          │
+          ▼
+     Investigation Context
+```
+
+The objective is to reconstruct how information participates in an operational history, not merely whether two documents contain similar language.
+
+---
+
+## 12. Questions, Source-Support Snapshots & Answer Accountability
+
+Questions and answers are preserved as governed records rather than disposable AI interactions.
+
+The implementation separates:
+
+1. the accepted question;
+2. the exact source-support snapshot supplied to answer generation;
+3. the completed answer; and
+4. later follow-up answers.
+
+A question record does not retrieve information.
+
+An answer-support record does not decide which sources belong in the answer.
+
+An answer record does not independently alter its source support or overwrite a prior answer.
+
+This separation allows the platform to preserve:
+
+```text
+Question
+   │
+   ▼
+Source-Support Snapshot
+   │
+   ▼
+Answer
+   │
+   ▼
+Evidence / Context Available at That Time
+```
+
+The result is an inspectable historical record of **what was asked, what information supported the response, and what answer existed at that point in time**.
+
+---
+
+## 13. Continuous Knowledge Evolution
+
+Continuous intelligence requires the platform to recognize that organizational knowledge can change when new information arrives.
+
+The implementation contains separated responsibilities for:
+
+- matching handed-off new evidence to prior-question candidates;
+- evaluating the effect of new evidence on prior answers;
+- preserving immutable knowledge-evolution records;
+- creating answer-revision queue jobs when revision is required; and
+- preserving follow-up answers without overwriting prior answers.
+
+```text
+Prior Question
+      │
+      ▼
+Prior Answer
+      │
+      ▼
+New Evidence
+      │
+      ▼
+Question ↔ Evidence Match
+      │
+      ▼
+Knowledge-Evolution Evaluation
+      │
+      ├── No Material Effect
+      ├── Strengthens
+      ├── Weakens
+      ├── Contradicts / Challenges
+      └── Requires Revision
+                    │
+                    ▼
+             Revision Queue
+                    │
+                    ▼
+             Follow-Up Answer
+```
+
+The original answer remains part of the historical record.
+
+The platform is therefore capable of preserving not only **what it knows**, but **what it knew previously, what changed, what new information caused the change, and how the resulting knowledge evolved**.
+
+---
+
+## 14. Continuous Information Ingestion — Live Email Architecture
+
+The current implementation set also contains a separated architecture for continuous Microsoft 365 email ingestion.
+
+Its responsibilities are intentionally divided:
+
+```text
+Microsoft Entra ID Group
+        │
+        ▼
+Mailbox Authorization Snapshot
+        │
+        ▼
+Graph Subscription Reconciliation
+        │
+        ▼
+Webhook Notification
+        │
+        ▼
+Validated Notification Record
+        │
+        ▼
+EMAIL-INGEST-JOB
+        │
+        ▼
+Authoritative Message + Attachments
+        │
+        ▼
+Immutable Live-Email Ingestion Record
+        │
+        ▼
+Existing Artifact Pipeline
+```
+
+A parallel mailbox-delta path establishes or restores message coverage when webhook delivery alone cannot prove complete mailbox history:
+
+```text
+Authorized Mailbox
+      │
+      ▼
+Folder-Specific Delta Query
+      │
+      ▼
+Observed Delta Changes
+      │
+      ▼
+EMAIL-INGEST-JOB
+      │
+      ▼
+New Immutable Delta State
+```
+
+The responsibilities for authorization, subscription management, webhook receipt, delta reconciliation, message retrieval, and artifact processing remain separated.
+
+**Implementation note:** the presence of these modules in the current implementation establishes the component architecture. It should not be interpreted as a claim that every Microsoft Graph/Entra deployment path has completed production end-to-end validation.
+
+---
+
+# Whole-Artifact Preservation
+
+The platform does not treat parsed text fragments as replacements for authoritative artifacts.
+
+Technical parsing, decoding, conversion, OCR, extraction, rendering, or other format-specific operations may be required to make information usable. Their outputs remain derivatives.
+
+Where available, the information model preserves:
+
+- source identity;
+- source hash and physical characteristics;
 - document structure;
 - page relationships;
 - content order;
 - metadata;
 - chronology;
 - attachments;
+- embedded artifacts;
 - visual information;
 - handwritten information;
 - annotations and markups;
 - contextual relationships; and
-- source provenance.
+- provenance.
 
-Technical parsing, decoding, conversion, OCR, extraction, or other format-specific operations may be required to make information readable. Those operations do not replace the authoritative artifact.
-
-Their outputs remain **derivative records linked to the source artifact through explicit lineage**.
-
-This distinction allows the platform to use the technical mechanisms necessary to understand different file formats without allowing those mechanisms to redefine the document itself.
-
-The objective is to preserve enough of the original information environment to understand not only **what a document says**, but also **where the information appeared, how it was represented, what it was connected to, and where it came from.**
+The objective is to preserve enough of the original information environment to determine not only **what information says**, but also **where it appeared, how it was represented, what it was connected to, and where it came from**.
 
 ---
 
-### Layer 4 — AI & Information Processing
+# Email & Communication Intelligence
 
-Transforms validated upstream records into higher-level information while preserving lineage to authoritative sources.
+Email is both an artifact and a communication event.
 
-Capabilities include:
-
-- summaries;
-- observations;
-- entity identification;
-- relationship discovery;
-- communication analysis;
-- contextual processing;
-- visual interpretation;
-- evidence preparation; and
-- AI-assisted analysis.
-
-AI-generated information remains distinguishable from deterministic source and verification records.
-
----
-
-### Layer 5 — Knowledge & Relationship Intelligence
-
-Connects information across artifacts, communications, entities, events, projects, and time.
-
-The objective is not simply to identify that two records contain similar text.
-
-The platform is designed to determine how information relates:
-
-```text id="0r42bp"
-Artifact
-   ↓
-Person / Organization
-   ↓
-Communication
-   ↓
-Event / Decision
-   ↓
-Related Artifact
-   ↓
-Observation
-   ↓
-Evidence
-   ↓
-Question
-   ↓
-Answer
-```
-
-This relationship architecture provides the foundation for reconstructing historical context and identifying information that may otherwise remain isolated.
-
----
-
-### Layer 6 — Governance, Evidence & Accountability
-
-Provides verification and accountability boundaries across the platform.
-
-Responsibilities include:
-
-- extraction verification;
-- coverage verification;
-- cross-path verification;
-- evidence provenance;
-- confidence;
-- tamper awareness;
-- identity and authorization boundaries;
-- permissions;
-- audit history;
-- human-in-the-loop escalation;
-- answer accountability; and
-- knowledge evolution.
-
-Autonomous processing does not eliminate human responsibility for consequential decisions.
-
----
-
-## System Context
-
-```text id="z6kk49"
-Servers / File Shares / Information Sources
-                    │
-                    ▼
-            Project Discovery
-                    │
-                    ▼
-           Artifact Registration
-                    │
-                    ▼
-       Format Identification & Routing
-                    │
-                    ▼
-        Specialized Reader Services
-                    │
-                    ▼
-      Verification & Recovery Services
-                    │
-                    ▼
-     Metadata / Visual / Communication
-              Processing
-                    │
-                    ▼
-      Relationship & Evidence Layer
-                    │
-                    ▼
-       Questions / Observations / Answers
-                    │
-                    ▼
-           Knowledge Repository
-                    │
-                    ▼
-          Knowledge Evolution
-```
-
----
-
-## Multi-Format Information Architecture
-
-Operational information does not exist in a single format.
-
-The platform is therefore designed around **artifact capabilities rather than a single document parser**.
-
-Different information types may require different reading, recovery, validation, verification, and interpretation paths while still producing records governed by common identity, lineage, and provenance requirements.
-
-The platform does not require information from every format to be flattened into a common collection of isolated text fragments before it can participate in downstream knowledge processing.
-
-Instead, specialized processing paths can preserve characteristics relevant to the artifact while producing traceable derivatives that remain connected to the authoritative source.
-
-This architecture allows the platform to process traditional text documents alongside email, attachments, scanned information, visual records, handwritten content, and legacy formats without flattening their distinct evidentiary characteristics.
-
----
-
-## Visual Intelligence
-
-Visual information is treated as evidence-bearing content rather than merely an image attachment.
-
-The visual architecture is designed to identify and preserve information contained in:
-
-- drawings;
-- photographs;
-- scanned pages;
-- visual objects;
-- handwritten notes;
-- annotations;
-- markups;
-- arrows and directional indicators;
-- symbols;
-- diagrams; and
-- other non-textual visual evidence.
-
-Visual processing can use multiple stages of observation, classification, recovery, analysis, validation, and verification.
-
-The objective is not simply to describe an image. It is to determine what information the visual artifact contributes while maintaining its relationship to the authoritative source.
-
----
-
-## Email & Communication Intelligence
-
-Email is treated as both an **artifact and a communication event**, not simply as a document containing extractable text.
-
-The platform preserves the available communication structure, including:
+Its meaning may depend upon:
 
 - sender;
 - recipients;
-- communication dates;
+- dates;
 - message content;
 - conversation context;
 - attachments;
-- project relationships; and
-- downstream evidence relationships.
+- project relationships;
+- later related information; and
+- the path by which the communication entered the organizational record.
 
-This distinction is important because the meaning of an email may depend upon more than the words contained in its body. Who sent the information, who received it, when it was communicated, what was attached, and how it relates to other project information may all contribute to understanding the organizational record.
+Attachments receive independent artifact identity while preserving explicit lineage to the communication through which they entered the platform.
 
-### Attachment Lineage
-
-Attachments are registered and processed as independent artifacts while maintaining explicit lineage to the email through which they entered the platform.
-
-An attached PDF, document, image, drawing, or other supported artifact can therefore enter its appropriate reader, visual, recovery, verification, relationship, and knowledge-processing paths without losing the communication context that explains its origin.
-
-```text id="p4svdf"
+```text
 Email
   │
   ├── Communication Metadata
-  │
   ├── Message Content
-  │
   ├── Conversation Context
-  │
   └── Attachment
           │
           ▼
-    Independent Artifact
+   Independent Artifact
           │
           ▼
-    Appropriate Processing Path
+   Appropriate Processing
           │
           ▼
-    Validation / Verification
-          │
-          ▼
-    Evidence / Relationships
+   Verification / Relationships
 ```
 
-The attachment does not become disconnected from the communication simply because it receives its own artifact identity.
+This permits questions beyond **What information existed?**
 
-This allows the platform to investigate not only:
+It supports investigation of:
 
-**What information existed?**
-
-but also:
-
-**Who communicated it?**
-
-**When was it communicated?**
-
-**Who received it?**
-
-**What accompanied it?**
-
-**How did it enter the organizational record?**
-
-**What later information relates to it?**
-
-Email relationships can therefore participate in broader chronology, communication, relationship, evidence, and knowledge analysis alongside reports, drawings, revisions, observations, and other project artifacts.
+- Who communicated it?
+- When?
+- To whom?
+- What accompanied it?
+- Which artifact carried it?
+- How did it enter the record?
+- What later information relates to it?
+- Did later information change the meaning of the earlier communication?
 
 ---
 
-## Unknown Format Resolution & Platform Learning
+# Native DWG Intelligence — Active Architectural Direction
 
-An autonomous document platform will eventually encounter information it does not understand.
+Native CAD intelligence is an active architectural direction for the Continuous Intelligence Platform.
 
-Unknown or unsupported formats are therefore treated as a governed state rather than an unrecoverable failure.
+The objective is **not** to convert a `.dwg` file to PDF, render it as an image, and treat the result as another document for a vision model.
 
-**Human-in-the-loop intervention is a last-resort escalation path. Before requesting human assistance, the platform is designed to exhaust the automated identification, structural inspection, and independent verification capabilities available to it.**
+A DWG is a structured technical information environment.
 
-Only when those available automated paths cannot establish a sufficiently supported format determination is the artifact escalated for human input.
+Depending on the drawing and authoring practices, native information can include:
 
-```text id="ehyod5"
-Unknown Artifact
-       │
-       ▼
-Automated Identification
-       │
-       ▼
-Structural / Format Inspection
-       │
-       ▼
-Independent Detection & Verification
-       │
-       ▼
-Exhaust Available Automated Paths
-       │
-       ▼
-    Resolved?
-    │      │
-   Yes     No
-    │      │
-    │      ▼
-    │   Human-in-the-Loop
-    │      │
-    │      ▼
-    │   Human Classification
-    │      │
-    │      ▼
-    │   Independent Verification
-    │      │
-    └──────┤
-           ▼
-     Resolution Record
-           │
-           ▼
-    Capability Knowledge
-```
+- entities and geometry;
+- model-space and paper-space organization;
+- coordinates;
+- units;
+- layers and layer states;
+- blocks;
+- block attributes;
+- text and MText;
+- dimensions;
+- leaders;
+- object properties;
+- object identifiers and relationships;
+- layouts and viewports;
+- external references (Xrefs);
+- nested references;
+- reference paths;
+- clipping and visibility state;
+- discipline-specific naming conventions;
+- source-drawing relationships;
+- revision relationships; and
+- other native CAD structures that may not survive or remain distinguishable in a PDF representation.
 
-The system preserves how the artifact entered the platform, what identification methods were attempted, how the issue was resolved, and whether human input was required.
+In multidisciplinary work, what appears to a user as one drawing may be an assembled information environment containing or referencing information from architecture, civil engineering, structural engineering, landscape architecture, irrigation, mechanical, electrical, utilities, survey, and other disciplines.
 
-Human classification is not automatically accepted as authoritative. Where possible, it is independently checked against structural or format evidence before the new classification becomes trusted platform knowledge.
+The first architectural question is therefore not:
 
-This allows the platform to **learn operationally without silently weakening verification standards.**
+> **What does this drawing look like?**
 
----
+It is:
 
-## Provider-Agnostic AI Integration
+> **How is this drawing assembled, where did its information originate, which discipline is responsible for each relevant portion, and how do those portions relate?**
 
-The AI Document Library is **not designed around or dependent upon a specific AI provider or model**.
+## Proposed Native DWG Processing Responsibility
 
-AI capabilities enter the platform through defined abstraction boundaries.
+The architectural direction is to preserve and analyze native CAD structure before higher-order interpretation.
 
-```text id="4g3qwh"
-Platform
+```text
+Native DWG
    │
    ▼
-AI Integration Boundary
+Native Structure Inspection
    │
-   ├── Provider / Model A
-   ├── Provider / Model B
-   ├── Local Model
-   └── Future Provider
+   ├── Drawing Identity / Version
+   ├── Units / Coordinates
+   ├── Model / Paper Space
+   ├── Layers / States / Properties
+   ├── Native Objects / Geometry
+   ├── Blocks / Attributes
+   ├── Text / Dimensions / Leaders
+   ├── Layouts / Viewports
+   └── Xrefs / Nested References / Paths
+   │
+   ▼
+Source & Reference Reconstruction
+   │
+   ▼
+Discipline Responsibility Association
+   │
+   ├── Native Structure
+   ├── Xref Source
+   ├── File / Layer Naming
+   ├── Metadata
+   ├── Object Context
+   └── Project Record Context
+   │
+   ▼
+Discipline-Specific Analysis
+   │
+   ├── Architectural
+   ├── Civil
+   ├── Structural
+   ├── Landscape
+   ├── Irrigation
+   ├── MEP
+   └── Other Specialized Analysis
+   │
+   ▼
+Cross-Discipline Relationship Analysis
+   │
+   ▼
+Project Information / Knowledge Relationships
 ```
 
-Providers and models may evolve without requiring the underlying evidence, reader, verification, relationship, or knowledge architecture to be redesigned.
+Discipline responsibility cannot safely be inferred from a layer name alone.
 
-Provider independence also allows different AI capabilities to be selected according to task requirements while maintaining common platform governance and provenance boundaries.
+A layer may be native to the current drawing, inherited through an Xref, renamed, overridden, nested, copied, or otherwise separated from the discipline that originally created the information. Responsibility association therefore needs to use available native structure, reference lineage, file identity, naming conventions, metadata, object context, and surrounding project information.
 
-AI remains a replaceable capability within the architecture.
+## Native Structure and Visual Representation Are Different Evidence Paths
+
+Native CAD analysis and visual analysis serve different responsibilities.
+
+A rendered representation may expose:
+
+- graphic relationships;
+- spatial patterns;
+- symbols;
+- linework relationships;
+- annotations;
+- visual conflicts; and
+- conditions understandable only in the composed drawing.
+
+Native inspection may expose:
+
+- source Xref identity;
+- layer provenance;
+- object properties;
+- exact geometry;
+- hidden/frozen/off-layer information;
+- block attributes;
+- nested reference structure;
+- coordinate relationships;
+- object-level distinctions; and
+- information lost during plotting or PDF conversion.
+
+Neither representation should automatically replace the other.
+
+The architecture should preserve both as connected representations of the same technical artifact.
+
+## Cross-Discipline Questions
+
+The intended architecture is designed to support questions such as:
+
+- Which discipline is responsible for this information?
+- Is the condition native to this drawing or supplied by an Xref?
+- Which referenced drawing introduced it?
+- Which revision or source file changed it?
+- Which native objects or layers participate in the condition?
+- Is another discipline still referencing an earlier source condition?
+- Did a building, wall, utility, grading condition, curb, hardscape element, planting area, irrigation condition, or other design element move between revisions?
+- Did that change propagate into dependent discipline drawings?
+- Are two discipline representations inconsistent?
+- Does one discipline's design depend upon information another discipline has changed?
+- Where in the multidisciplinary information chain did coordination diverge?
+- What email, specification, calculation, submittal, meeting record, photograph, or other project artifact explains the change?
+
+The longer-term objective is not simply **AI that can see a drawing**.
+
+It is an architecture capable of preserving and reasoning across **native technical structure, visual representation, discipline responsibility, reference lineage, revision history, and the surrounding project record**.
+
+**Status:** Native DWG intelligence is an active architectural and engineering direction. It is not represented here as a currently validated production reader capability.
 
 ---
 
-## Evidence & Verification Architecture
+# Provider-Agnostic AI Integration
 
-A central platform principle is:
+The platform is not designed around a specific AI provider or model.
 
-**Extraction does not equal verification.**
+AI capabilities enter through defined abstraction boundaries. Provider selection can vary by task without redefining the underlying artifact, reader, verification, relationship, or knowledge architecture.
 
-Successfully reading information from an artifact establishes that information was extracted. It does not automatically establish completeness, accuracy, coverage, or evidentiary reliability.
+AI is replaceable.
 
-The same principle applies to recovery. Successfully recovering information establishes that another processing path produced information—it does not automatically establish that the recovered information should be trusted.
-
-Verification may therefore occur at multiple boundaries, including:
-
-- reader execution;
-- extraction;
-- document coverage;
-- alternative extraction paths;
-- recovery outputs;
-- visual recovery;
-- derivative comparison;
-- format identification; and
-- downstream evidence preparation.
-
-Depending on the artifact and available processing paths, verification can evaluate characteristics such as:
-
-- correspondence to the authoritative source;
-- expected document or page coverage;
-- preservation of content relationships;
-- consistency across independent or alternative processing paths;
-- extraction completeness;
-- derivative lineage; and
-- whether sufficient support exists for downstream use.
-
-Not every artifact will provide every verification opportunity. The platform therefore uses the verification evidence available for that artifact rather than assuming that successful processing itself establishes trust.
-
-Information recovered through an alternative processing path remains subject to validation and verification before it is promoted into trusted downstream processing.
-
-Verification results remain distinct records rather than silently modifying authoritative source evidence.
+The information architecture is not.
 
 ---
 
-## Identity, Access & Enterprise Security
+# Governance, Verification & Accountability
+
+Governance is cross-cutting rather than a final processing step.
+
+Relevant boundaries include:
+
+- source identity;
+- immutable record responsibilities;
+- extraction verification;
+- execution verification;
+- coverage verification;
+- cross-path verification;
+- derivative lineage;
+- format-knowledge governance;
+- tamper awareness;
+- confidence/limitations;
+- human-in-the-loop escalation;
+- identity and authorization;
+- audit history;
+- answer accountability; and
+- knowledge evolution.
+
+Autonomous execution does not eliminate human responsibility for consequential decisions.
+
+---
+
+# Identity, Access & Enterprise Security
 
 Autonomous discovery must not become a mechanism for bypassing organizational security.
 
-The platform is therefore designed to separate **information discovery from authorization to access that information**.
+The architecture therefore separates:
 
-The fact that the AI Document Library can discover, register, relate, or process an artifact does not mean that every user should be permitted to retrieve its contents or receive AI-generated information derived from it.
+**knowledge that information exists**
 
-Enterprise identity services, including **Microsoft Active Directory and Microsoft Entra ID**, are architectural integration targets for establishing user identity and authorization boundaries.
+from
 
-The objective is to preserve organizational access controls across:
+**authorization to disclose that information or conclusions derived from it.**
 
-- source artifacts;
-- derived records;
-- metadata;
-- evidence;
-- relationships;
-- search and retrieval;
-- AI-assisted analysis; and
-- generated answers.
+Microsoft Active Directory and Microsoft Entra ID are enterprise identity integration targets within the architecture.
 
-A user's interaction with the AI layer should not provide broader access than the authorization governing the underlying information.
+AI-assisted retrieval and generated responses must remain within the authorization boundaries governing the underlying source information.
 
-### Authorization Inheritance
-
-**AI-assisted retrieval and generated responses must respect the access boundaries governing their underlying source information.**
-
-This principle is intended to prevent AI from becoming an alternative path around established organizational permissions.
-
-For example, the platform may know that a restricted artifact exists and understand that it participates in a project relationship while still preventing an unauthorized user from receiving protected content or conclusions derived from that content.
-
-Identity, authorization decisions, and relevant access events can also participate in the platform's governance and audit model.
-
-**Status:** Enterprise identity and directory integration is an architectural integration target and should not be interpreted as a currently validated production capability until implementation and end-to-end security testing are complete.
+**Status:** Enterprise identity and directory integration should not be interpreted as a fully validated production security capability until the relevant deployment and end-to-end authorization testing are complete.
 
 ---
 
-## Knowledge Evolution
+# Canonical Record Responsibilities
 
-Operational knowledge changes when evidence changes.
+The platform contains logical record responsibilities including, but not limited to:
 
-An answer that is well supported today may need to be reconsidered when a new email, drawing revision, report, handwritten annotation, decision, or historical artifact becomes available.
+- Project / Intake Records
+- Artifact Records
+- Artifact Review Records
+- Metadata Records
+- Format Identification Records
+- Format Knowledge / Verification Records
+- Reader Queue Jobs
+- Reader Claim / Execution Records
+- Reader Output Records
+- Child Artifact Records
+- Derivative Records
+- OCR Records
+- Visual Records
+- Communication Records
+- Summary Records
+- Coverage Records
+- Verification Records
+- Source-Support Records
+- Observation Records
+- Entity Records
+- Relationship Records
+- Investigation Indexes
+- Question Records
+- Answer-Support Records
+- Answer Records
+- New-Evidence Match Records
+- Knowledge-Evolution Records
+- Answer-Revision Queue Records
+- Follow-Up Answer Records
+- Mailbox Authorization Records
+- Email Subscription Records
+- Email Notification / Ingest Records
+- Mailbox Delta-State Records
+- Governance Records
+- Audit / Runtime Records
 
-The platform is designed to preserve:
+These are logical responsibility boundaries. Physical persistence may evolve without changing their provenance or responsibility contracts.
 
-```text id="qzdl8g"
-Original Question
-       │
-       ▼
-Available Evidence
-       │
-       ▼
-Original Answer
-       │
-       ▼
-Original Reasoning / Support
-       │
-       ▼
-New Evidence Arrives
-       │
-       ▼
-Relationship & Relevance Analysis
-       │
-       ▼
-Reaffirm • Refine • Challenge
-       │
-       ▼
-Evolved Knowledge
+---
+
+# Autonomous Execution Model
+
+The platform orchestrator coordinates established responsibilities in dependency order.
+
+It does not absorb those responsibilities.
+
+Conceptually:
+
+```text
+Platform Launch
+     │
+     ▼
+Project Discovery
+     │
+     ▼
+Intake Assessment
+     │
+     ▼
+Artifact Registration
+     │
+     ├── Metadata
+     ├── Format Identification / Learning
+     └── Queue Preparation
+             │
+             ▼
+      Reader Supervision
+             │
+             ▼
+      Execution Verification
+             │
+             ├── Derivative / Recovery Paths
+             ├── Embedded Child Routing
+             ├── OCR
+             ├── Visual Processing
+             ├── Artifact Review
+             ├── Summaries / Coverage / Verification
+             └── Observations
+                     │
+                     ▼
+              Relationship Intelligence
+                     │
+                     ▼
+              Knowledge Responsibilities
 ```
 
-The original conclusion is not simply overwritten.
+A downstream failure does not, by itself, prove that an upstream component is defective.
 
-Its evidence, context, and reasoning remain part of the historical record so that users can understand **what changed, why it changed, and what evidence caused the change.**
-
-The architecture also allows important new information to become an observation even when it does not directly answer a previously asked question.
-
-**Preserving unresolved knowledge until more evidence becomes available.**
+Implementation verification therefore traces the actual handoff boundary before changing validated component behavior.
 
 ---
 
-## Answer Accountability
+# Engineering Methodology
 
-Answers are treated as governed knowledge records rather than disposable AI output.
+Platform capabilities follow a disciplined engineering lifecycle:
 
-The architecture is designed to maintain relationships among:
+```text
+Question
+   ↓
+Architecture
+   ↓
+Responsibility
+   ↓
+Standalone Development
+   ↓
+Standalone Validation
+   ↓
+Implementation
+   ↓
+Integration
+   ↓
+Implementation Verification
+   ↓
+End-to-End Validation
+   ↓
+Documentation
+   ↓
+Continuous Evolution
+```
 
-- the question;
-- evidence available at the time;
-- supporting artifacts;
-- observations;
-- reasoning/support;
-- answer;
-- confidence;
-- later evidence; and
-- subsequent revisions.
+A validated responsibility is not intentionally redefined merely to make a downstream integration failure disappear.
 
-This makes it possible to investigate not only an answer, but the information environment from which that answer was produced.
+New capabilities are expected to connect through established contracts unless testing demonstrates that the responsibility or contract itself is defective.
+
+This distinction is central to the engineering process:
+
+> **Determine where the process actually stopped before changing what already worked.**
 
 ---
 
-## Architectural Principles
+# Architectural Principles
 
-The platform is governed by the following engineering principles:
+The platform is governed by principles including:
 
 - **Architecture Before Interface**
-- **Evidence Integrity Before AI Interpretation**
-- **Evidence Invariance**
-- **Separated Lineage**
-- **Single Responsibility**
-- **Whole-Document Preservation**
+- **Authoritative Source Preservation**
+- **Artifact Identity Before Interpretation**
+- **Separated Responsibilities**
+- **Explicit Handoffs**
+- **Forward-Only Processing Where Responsibility Has Already Been Established**
+- **Whole-Artifact Preservation**
 - **Whole-Document-First Processing**
+- **Derivative Lineage**
+- **Extraction Does Not Equal Verification**
+- **Execution Does Not Equal Verification**
 - **Verification Separation**
 - **Provider-Agnostic AI Integration**
 - **Autonomous Execution with Governed Escalation**
+- **Human-in-the-Loop as Escalation, Not Default Processing**
 - **Authorization Inheritance**
+- **Immutable Historical Knowledge**
 - **Traceable Knowledge Evolution**
-- **Validation-First Development**
+- **Validation Before Integration**
+- **Implementation Verification Before Architectural Redesign**
 - **Human Accountability**
 
-### Whole-Document Preservation
-
-The platform does not treat parsed or extracted fragments as replacements for the authoritative artifact. Technical extraction may expose information contained within an artifact, but structure, context, provenance, and lineage remain part of the information model.
-
-### Verification Separation
-
-Processing success and evidentiary trust are separate states. Extraction, recovery, AI interpretation, or human input does not automatically become trusted platform knowledge without the applicable validation and verification boundaries.
-
-### Authorization Inheritance
-
-AI-assisted retrieval and generated responses must remain within the authorization boundaries governing the source information from which they are derived.
-
 ---
 
-## Canonical Information Model
+# Deployment & Technology Direction
 
-The platform architecture includes canonical record responsibilities for information such as:
+## Current Implementation
 
-- Projects
-- Artifacts
-- Metadata
-- Reader Records
-- Visual Records
-- Communication Records
-- Summaries
-- Observations
-- Evidence
-- Entities
-- Relationships
-- Verification
-- Questions
-- Answer Support
-- Answers
-- Knowledge Evolution
-- Governance
-- Audit History
+The active implementation is centered on:
 
-These represent logical platform responsibilities. Their physical storage implementation may evolve without changing the responsibility or provenance model.
+- modular Python components;
+- canonical JSON records;
+- explicit file-based handoffs and runtime state;
+- autonomous orchestration;
+- specialized reader services;
+- configurable parallel reader workers;
+- deterministic and AI-assisted processing boundaries;
+- provider abstraction;
+- verification records;
+- relationship records; and
+- traceable knowledge records.
 
----
+Current engineering priority is implementation verification and end-to-end validation of the unified platform before introducing infrastructure complexity that is not required to prove the architecture.
 
-## Technical Library
+## Architectural Extension Points
 
-Detailed engineering material is maintained separately from this overview.
+Future deployment requirements may justify:
 
-| Document | Purpose |
-|----------|---------|
-| `DESIGN_PHILOSOPHY.md` | Engineering principles governing the platform |
-| `ARCHITECTURAL_RATIONALE.md` | Rationale behind major architectural decisions |
-| `SCHEMAS.md` | Canonical record architecture and data contracts |
-| `FORENSICS_PLAYBOOK.md` | Explainable evidence lineage and investigation workflows |
-| `ROADMAP.md` | Strategic architectural direction |
-
----
-
-## Deployment & Technology Direction
-
-The current platform implementation and the long-term enterprise architecture are intentionally distinguished.
-
-### Current Implementation
-
-The active platform is centered on a modular Python runtime with specialized processing components, canonical JSON records, autonomous orchestration, and defined AI integration boundaries.
-
-Current engineering priorities are focused on completing integration and validating the unified platform before introducing unnecessary infrastructure complexity.
-
-### Architectural Direction
-
-The architecture is designed so that future deployments may introduce additional technologies where scale, performance, security, or deployment requirements justify them.
-
-Potential enterprise extensions include:
-
-- enterprise identity and directory integration;
-- additional service languages for specialized responsibilities;
-- relational database persistence;
+- enterprise identity/directory integration;
+- relational persistence;
+- graph-oriented persistence;
 - distributed messaging;
-- containerized deployment;
 - service APIs;
+- containerized deployment;
 - distributed processing;
-- additional storage engines; and
-- additional AI providers.
+- additional storage engines;
+- additional AI providers;
+- additional technical-artifact processors;
+- native CAD processing; and
+- other specialized information services.
 
-These represent **architectural extension points and deployment options**, not claims that every technology is currently required or operational within the active implementation.
+These are extension points, not claims that every technology is currently operational.
 
 Technology is selected to satisfy an engineering responsibility—not to define the architecture.
 
 ---
 
-## Non-Functional Objectives
+# Non-Functional Objectives
 
-The platform architecture is designed toward:
+The architecture is designed toward:
 
-- scalability;
+- traceability;
+- auditability;
 - reliability;
 - recoverability;
 - fault isolation;
+- deterministic handoffs where applicable;
+- concurrency safety;
+- scalability;
 - performance;
-- auditability;
 - security;
 - extensibility;
 - maintainability;
-- portability; and
-- long-term evidence integrity.
+- portability;
+- provider independence;
+- provenance preservation; and
+- long-term knowledge integrity.
 
 ---
 
-## Development Methodology
+# Public Architecture / Private Implementation
 
-Platform capabilities follow a disciplined engineering lifecycle:
-
-```text id="9eeyrw"
-Question
-    ↓
-Architecture
-    ↓
-Responsibility
-    ↓
-Validation
-    ↓
-Implementation
-    ↓
-Verification
-    ↓
-Integration
-    ↓
-Documentation
-    ↓
-Continuous Evolution
-```
-
-Previously validated responsibilities are not intentionally redefined merely to accommodate a new integration.
-
-New capabilities are expected to integrate through established boundaries unless testing demonstrates that an underlying architectural responsibility itself requires correction.
-
----
-
-## Public Architecture / Private Implementation
-
-This repository documents the engineering architecture and methodology of the AI Document Library.
-
-The production implementation remains private.
+This repository documents the engineering architecture and methodology of the **Continuous Intelligence Platform**.
 
 Public documentation may describe:
 
@@ -830,32 +1136,50 @@ Public documentation may describe:
 - system relationships;
 - engineering principles;
 - record models;
+- execution architecture;
 - verification concepts;
-- design rationale; and
+- design rationale;
+- implementation status; and
 - platform capabilities.
 
 Private implementation may include:
 
-- production Python source code;
+- production Python source;
 - specialized readers and adapters;
 - orchestration implementation;
-- format detection logic;
-- regular expression libraries;
+- format-detection logic;
 - recovery logic;
 - AI prompts;
 - provider configuration;
-- internal validation tooling; and
+- internal validation tooling;
+- security configuration; and
 - deployment-specific configuration.
 
-This boundary allows the architecture to be technically evaluated without publishing proprietary implementation details.
+This boundary permits technical evaluation of the architecture without publishing proprietary implementation details.
 
 ---
 
-## Technical Evaluation & Licensing
+# Technical Library
 
-Organizations interested in evaluating the AI Document Library architecture, discussing commercial licensing, or exploring strategic partnerships may request a technical demonstration or private technical review.
+Detailed engineering material is maintained separately from this overview.
 
-Access to proprietary implementation details or source code may be provided under a mutually executed Non-Disclosure Agreement (NDA).
+| Document | Purpose |
+|---|---|
+| `DESIGN_PHILOSOPHY.md` | Engineering principles governing the platform |
+| `ARCHITECTURAL_RATIONALE.md` | Rationale behind major architectural decisions |
+| `SCHEMAS.md` | Canonical record architecture and data contracts |
+| `FORENSICS_PLAYBOOK.md` | Explainable provenance and investigation workflows |
+| `ROADMAP.md` | Strategic architectural direction |
+
+---
+
+## Independent Research & Development
+
+The **Continuous Intelligence Platform** is an independent research and development project created and developed through **eco619**.
+
+The platform is an operational autonomous system developed through independent research and development, integrating information processing, verification, provenance, relationship intelligence, knowledge evolution, and provider-agnostic artificial intelligence within a unified architecture.
+
+The work is independently developed and is not presented as a product or implementation created on behalf of an employer, client, AI provider, or other organization.
 
 ---
 
