@@ -1,10 +1,10 @@
 # Technical Library
 
-## Engineering Reference for the AI Document Library
+## Engineering Reference for the Continuous Intelligence Platform
 
-The Technical Library serves as the authoritative engineering reference for the AI Document Library platform.
+The Technical Library serves as the authoritative engineering reference for the Continuous Intelligence Platform (CIP).
 
-While the Enterprise Architecture Specification defines the system at an architectural level, the Technical Library expands each architectural discipline into detailed engineering guidance. Together these documents capture the principles, rationale, methodologies, and technical decisions that govern the design, implementation, verification, and long-term evolution of the platform.
+While the Enterprise Architecture Specification defines the system at an architectural level, the Technical Library expands each architectural discipline into detailed engineering guidance. Together these documents capture the principles, rationale, methodologies, and technical decisions that govern the design, validation, implementation, integration, implementation verification, baseline testing, and long-term evolution of the platform.
 
 Rather than functioning as user documentation, the Technical Library exists to preserve engineering knowledge. It documents not only *what* was built, but *why* it was built, the design alternatives that were considered, the engineering tradeoffs that shaped the final architecture, and the principles that continue to guide its evolution.
 
@@ -12,14 +12,14 @@ Rather than functioning as user documentation, the Technical Library exists to p
 
 # Purpose
 
-The Technical Library establishes the engineering foundation upon which the AI Document Library is designed, implemented, validated, and maintained.
+The Technical Library establishes the engineering foundation upon which CIP is designed, validated, implemented, integrated, verified, tested, and maintained.
 
 Its objectives are to:
 
 - Preserve engineering intent beyond software implementation.
 - Document architectural decisions and their rationale.
 - Define canonical data structures and engineering contracts.
-- Establish evidence integrity and verification methodologies.
+- Establish source integrity, traceability and verification methodologies.
 - Promote explainable engineering and transparent AI design.
 - Support future platform evolution without sacrificing architectural consistency.
 - Serve as the permanent engineering knowledge base for the platform.
@@ -37,7 +37,7 @@ Topics include:
 - Engineering values
 - Design objectives
 - System thinking
-- Evidence-first architecture
+- Source integrity and traceability
 - Explainable AI principles
 - Long-term maintainability
 
@@ -96,7 +96,7 @@ Topics include:
 
 ## Platform Roadmap
 
-Documents the strategic engineering direction of the AI Document Library.
+Documents the strategic engineering direction of the Continuous Intelligence Platform.
 
 Rather than functioning as a feature list, the roadmap captures the long-term architectural vision and planned evolution of the platform.
 
@@ -113,7 +113,7 @@ Topics include:
 
 # Relationship to the Enterprise Architecture Specification
 
-The Enterprise Architecture Specification introduces the complete architecture of the AI Document Library.
+The Enterprise Architecture Specification introduces the complete architecture of the Continuous Intelligence Platform.
 
 The Technical Library expands each major architectural discipline into detailed engineering documentation while maintaining consistency with the Enterprise Architecture Specification.
 
@@ -128,17 +128,17 @@ Together they provide both architectural understanding and engineering depth.
 
 # Engineering Principles
 
-Every document contained within the Technical Library adheres to the same engineering principles that govern the AI Document Library itself.
+Every document contained within the Technical Library adheres to the same engineering principles that govern the Continuous Intelligence Platform itself.
 
 Those principles include:
 
-- Evidence integrity before AI interpretation.
+- Source integrity before AI interpretation.
 - Whole-document-first processing.
 - Immutable record identity.
 - Explainable engineering decisions.
 - Complete traceability.
 - Provider independence.
-- Validation before automation.
+- Validated component responsibilities before autonomous integration.
 - Transparent architectural evolution.
 - Long-term maintainability.
 - Security through engineering discipline.
@@ -168,7 +168,7 @@ This includes:
 
 The Technical Library is intentionally maintained as living engineering documentation.
 
-As the AI Document Library evolves, these documents evolve with it, preserving the architectural intent, engineering reasoning, and technical knowledge required to ensure that future development remains consistent with the platform's founding principles.
+As the Continuous Intelligence Platform evolves, these documents evolve with it, preserving the architectural intent, engineering reasoning, and technical knowledge required to ensure that future development remains consistent with the platform's founding principles.
 
 The objective is not simply to document software.
 
