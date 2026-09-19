@@ -1,28 +1,18 @@
 # Canonical Schemas
 
-------------------------------------------------------------------------
-Attribute                           Value
------------------------------------ -----------------------------------
-**Document Status**                 Published
-
-**Version**                         1.0
-
-**Audience**                        Software Architects, Developers,
-                                    Technical Reviewers
-
-**Purpose**                         Define the canonical record
-                                    architecture used by the platform
-
-**Related Documents**               [Enterprise Architecture Specification](../../README.md),
-                                    [Design Philosophy](design-philosophy.md),
-                                    [Style Guide](style-guide.md)
-------------------------------------------------------------------------
+| Attribute | Value |
+|---|---|
+| **Document Status** | Published |
+| **Version** | 1.0 |
+| **Audience** | Software Architects, Developers, Technical Reviewers |
+| **Purpose** | Define the canonical record architecture used by the platform |
+| **Related Documents** | [Enterprise Architecture Specification](../../README.md), [Design Philosophy](design-philosophy.md), [Style Guide](style-guide.md) |
 
 ---
 
 ## Introduction
 
-Canonical schemas define the shared data contracts that allow independently developed platform components to exchange information consistently and reliably. By establishing standardized record structures, field definitions, validation expectations, and lifecycle relationships, the AI Document Library ensures that information maintains integrity, traceability, and interoperability throughout the platform.
+Canonical schemas define the shared data contracts that allow independently developed platform components to exchange information consistently and reliably. By establishing standardized record structures, field definitions, validation expectations, and lifecycle relationships, the Continuous Intelligence Platform (CIP) ensures that information maintains integrity, traceability, and interoperability throughout the platform.
 
 Rather than serving as implementation details for individual scripts, canonical schemas define the platform's authoritative information model. They provide stable contracts that allow autonomous services to evolve independently while preserving compatibility, traceability, and confidence in the information exchanged throughout the system.
 
@@ -91,7 +81,7 @@ Each canonical record should define:
 
 ## Schema Design Principles
 
-Canonical schemas establish the engineering contracts that allow independently developed platform components to communicate reliably while preserving evidence integrity and long-term maintainability.
+Canonical schemas establish the engineering contracts that allow independently developed platform components to communicate reliably while preserving information integrity, traceability, and long-term maintainability.
 
 - **Single Responsibility** — Each canonical record represents one authoritative responsibility within the platform and avoids overlapping responsibilities with other record types.
 
@@ -117,4 +107,4 @@ Canonical records provide stable contracts between independently evolving platfo
 
 Copyright © 2026 Joseph Contreras
 
-This document is part of the AI Document Library Technical Library.
+This document is part of the Continuous Intelligence Platform Technical Library.
