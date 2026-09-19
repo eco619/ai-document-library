@@ -30,20 +30,19 @@ The GitHub repository name and historical implementation identifiers may continu
 
 ---
 
-## Current Engineering State — Implementation Verification
+## Current Engineering State — Baseline Testing
 
 The platform has progressed beyond isolated component development.
 
 Major responsibilities were developed and validated independently before being connected into a singular autonomous execution environment. The current implementation contains explicit orchestration, project intake, artifact registration, format identification, specialized reader queues, parallel reader supervision, job claiming, heartbeats, abandoned-job recovery, reader-execution verification, derivative processing, embedded-artifact routing, metadata and artifact review, OCR, visual processing, summaries, observations, relationships, and downstream knowledge-record responsibilities.
 
-Current engineering work is focused on **implementation verification**: executing the integrated platform against real project information, verifying handoffs between independently developed responsibilities, identifying whether failures originate in a component, configuration, execution boundary, queue, orchestration path, or downstream contract, and correcting demonstrated defects without casually redefining validated responsibilities.
+Integration and implementation verification of the autonomous platform have been completed. Current engineering work is focused on **baseline testing and end-to-end evaluation** against known project information to establish baseline system behavior and determine whether processing results, relationships, verification states, and resulting information are supported by the authoritative source record.
 
 A controlled multi-format execution has been recorded to make the implemented processing sequence directly observable.
 
 **▶ [Watch the Autonomous Platform — Controlled Implementation Verification](docs/implementation-verification/autonomous-platform-controlled-execution.md)**
 
-Broader historical-project execution and end-to-end validation continue as implementation verification expands.
-
+Broader historical-project execution now continues through baseline testing and end-to-end evaluation of the integrated platform.
 ---
 
 ## About This Repository
@@ -990,7 +989,7 @@ Artifact Registration
 
 A downstream failure does not, by itself, prove that an upstream component is defective.
 
-Implementation verification therefore traces the actual handoff boundary before changing validated component behavior.
+Implementation verification traces the actual handoff boundary before changing validated component behavior.
 
 ---
 
@@ -1005,9 +1004,7 @@ Architecture
    ↓
 Responsibility
    ↓
-Standalone Development
-   ↓
-Standalone Validation
+Validation
    ↓
 Implementation
    ↓
@@ -1015,9 +1012,7 @@ Integration
    ↓
 Implementation Verification
    ↓
-End-to-End Validation
-   ↓
-Documentation
+Baseline Testing
    ↓
 Continuous Evolution
 ```
@@ -1078,7 +1073,7 @@ The active implementation is centered on:
 - relationship records; and
 - traceable knowledge records.
 
-Current engineering priority is implementation verification and end-to-end validation of the unified platform before introducing infrastructure complexity that is not required to prove the architecture.
+Current engineering priority is baseline testing and end-to-end evaluation of the unified platform against known project information before introducing infrastructure complexity that is not required to evaluate the established architecture and resulting system behavior.
 
 ## Architectural Extension Points
 
