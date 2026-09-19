@@ -1,27 +1,18 @@
 # Technical Library Style Guide
 
-------------------------------------------------------------------------
-Attribute                           Value
------------------------------------ -----------------------------------
-**Document Status**                 Published
-
-**Version**                         1.0
-
-**Audience**                        Contributors, Software Architects,
-                                    Developers, Technical Reviewers
-
-**Purpose**                         Establish documentation standards
-                                    for the AI Document Library
-                                    Technical Library
-
-**Related Documents**               [Enterprise Architecture Specification](../../README.md)
-------------------------------------------------------------------------
+| Attribute | Value |
+|---|---|
+| **Document Status** | Published |
+| **Version** | 1.0 |
+| **Audience** | Contributors, Software Architects, Developers, Technical Reviewers |
+| **Purpose** | Establish documentation standards for the Continuous Intelligence Platform Technical Library |
+| **Related Documents** | [Enterprise Architecture Specification](../../README.md) |
 
 ---
 
 # Introduction
 
-The AI Document Library Technical Library is intended to serve as a long-term engineering reference rather than a collection of project notes. Every document within the Technical Library should follow a consistent structure, writing style, and formatting standard to improve readability, maintainability, and traceability.
+The Continuous Intelligence Platform Technical Library is intended to serve as a long-term engineering reference rather than a collection of project notes.
 
 This style guide establishes the documentation standards governing all current and future Technical Library publications.
 
@@ -107,6 +98,7 @@ Documentation should:
 - Avoid unnecessary marketing language.
 - Prefer precision over brevity.
 - Clearly distinguish facts, recommendations, and assumptions.
+- Distinguish current capabilities, validated engineering behavior, and future architectural direction.
 
 ---
 
