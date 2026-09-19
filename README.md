@@ -1156,15 +1156,17 @@ This boundary permits technical evaluation of the architecture without publishin
 
 # Technical Library
 
-Detailed engineering material is maintained separately from this overview.
+Detailed engineering material is maintained in the
+[`technical-library`](technical-library/) directory.
 
 | Document | Purpose |
 |---|---|
-| `DESIGN_PHILOSOPHY.md` | Engineering principles governing the platform |
-| `ARCHITECTURAL_RATIONALE.md` | Rationale behind major architectural decisions |
-| `SCHEMAS.md` | Canonical record architecture and data contracts |
-| `FORENSICS_PLAYBOOK.md` | Explainable provenance and investigation workflows |
-| `ROADMAP.md` | Strategic architectural direction |
+| [Design Philosophy](technical-library/design-philosophy.md) | Engineering principles governing the platform |
+| [Architectural Rationale](technical-library/architectural-rationale.md) | Rationale behind major architectural decisions |
+| [Canonical Schemas](technical-library/canonical-schemas.md) | Canonical record architecture and data contracts |
+| [Forensics Playbook](technical-library/forensics-playbook.md) | Explainable provenance and investigation workflows |
+| [Platform Capabilities](technical-library/platform-capabilities.md) | Documented platform capabilities and responsibility boundaries |
+| [Style Guide](technical-library/style-guide.md) | Documentation conventions and technical writing standards |
 
 ---
 
