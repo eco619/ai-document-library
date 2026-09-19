@@ -10,13 +10,13 @@ Status: Published
 
 Most document systems focus on extracting text.
 
-The AI Document Library focuses on understanding documents.
+The Continuous Intelligence Platform (CIP) focuses on understanding documents.
 
-Document extraction is the process of identifying, recovering, validating, and preserving information contained within an artifact while maintaining complete evidence traceability and confidence in the extracted information.
+Document extraction is the process of identifying, recovering, validating, and preserving information contained within an artifact while maintaining complete source traceability and confidence in the extracted information.
 
-Rather than treating every document as a page of text, the platform evaluates each artifact to determine the most authoritative extraction strategy, measures document coverage, preserves evidence integrity, and records the confidence associated with every observation.
+Rather than treating every document as a page of text, the platform evaluates each artifact to determine the most authoritative extraction strategy, measures document coverage, preserves information integrity, and records the confidence associated with every observation.
 
-The objective is not simply to read documents—it is to understand documents, preserve their evidence, reconstruct their context, and transform organizational information into trustworthy knowledge.
+The objective is not simply to read documents—it is to understand documents, preserve their source information, reconstruct their context, and transform organizational information into trustworthy knowledge.
 
 ---
 
@@ -38,8 +38,7 @@ Many of these documents contain information that extends far beyond machine-read
 
 Traditional OCR converts images into text.
 
-The AI Document Library transforms artifacts into trustworthy organizational knowledge.
-
+CIP transforms artifacts into trustworthy organizational knowledge.
 ---
 
 ## Core Capabilities
@@ -116,7 +115,7 @@ This includes:
 - Visual relationships
 - Cross-page references
 
-Annotations are treated as evidence rather than isolated text.
+Annotations are treated as contextual information rather than isolated text.
 
 Rather than extracting handwritten words independently, the platform evaluates relationships between annotations, their visual characteristics, their location within the document, and their relationship to surrounding engineering content.
 
@@ -137,11 +136,11 @@ The platform may also identify:
 - Cross-page annotation relationships
 - Engineering review workflows
 
-These observations remain traceable to the original artifact and are preserved together with confidence measurements, supporting evidence, and complete evidence lineage.
+These observations remain traceable to the original artifact and are preserved together with confidence measurements, supporting evidence, and complete source lineage.
 
 ---
 
-### Evidence Integrity
+### Source Integrity and Traceability
 
 Every extraction preserves:
 
@@ -158,15 +157,15 @@ Every extraction preserves:
 
 Intelligent Document Extraction enables organizations to recover, preserve, and understand information that is often overlooked or lost during traditional document processing.
 
-Rather than simply extracting text, the platform reconstructs document context, identifies relationships between annotations, measures extraction quality, and preserves complete evidence traceability.
+Rather than simply extracting text, the platform reconstructs document context, identifies relationships between annotations, measures extraction quality, and preserves complete source traceability.
 
-By combining authoritative extraction, visual interpretation, multi-path verification, and confidence measurement, the AI Document Library enables organizations to:
+By combining authoritative extraction, visual interpretation, multi-path verification, and confidence measurement, the CIP enables organizations to:
 
 - Reduce investigation time.
 - Improve confidence in AI-generated answers.
 - Preserve engineering and organizational knowledge.
 - Detect relationships that extend across multiple documents and drawing sheets.
-- Support engineering, legal, regulatory, insurance, and historical investigations with complete evidence lineage.
+- Support engineering, legal, regulatory, insurance, and historical investigations with complete source lineage and traceability.
 - Transform organizational documents into explainable, trustworthy knowledge.
 
 ---
@@ -189,10 +188,10 @@ Without trustworthy extraction, trustworthy organizational knowledge cannot exis
 
 The objective of document extraction is not simply to recover text.
 
-The objective is to preserve evidence, understand context, measure confidence, reconstruct document relationships, and transform organizational documents into explainable, trustworthy knowledge while maintaining complete evidence traceability.
+The objective is to preserve source information, understand context, measure confidence, reconstruct document relationships, and transform organizational documents into explainable, trustworthy knowledge while maintaining complete source traceability.
 
 ---
 
 Copyright © 2026 Joseph Contreras
 
-This document is part of the AI Document Library Platform Capabilities collection.
+This document is part of the Continuous Intelligence Platform capability documentation.
