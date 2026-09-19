@@ -1,29 +1,18 @@
 # Forensics Playbook
 
-------------------------------------------------------------------------
-Attribute                           Value
------------------------------------ -----------------------------------
-**Document Status**                 Published
-
-**Version**                         1.0
-
-**Audience**                        Software Architects, Developers,
-                                    Technical Reviewers
-
-**Purpose**                         Demonstrate explainable evidence
-                                    lineage without exposing proprietary
-                                    implementation
-
-**Related Documents**               [Design Philosophy](design-philosophy.md),
-                                    [Canonical Schemas](schemas.md),
-                                    [Style Guide](style-guide.md)
-------------------------------------------------------------------------
+| Attribute | Value |
+|---|---|
+| **Document Status** | Published |
+| **Version** | 1.0 |
+| **Audience** | Software Architects, Developers, Technical Reviewers |
+| **Purpose** | Demonstrate explainable evidence lineage without exposing proprietary implementation |
+| **Related Documents** | [Design Philosophy](design-philosophy.md), [Canonical Schemas](canonical-schemas.md), [Style Guide](style-guide.md) |
 
 ---
 
 ## Introduction
 
-The Forensics Playbook demonstrates how the AI Document Library establishes confidence in its answers through deterministic evidence lineage rather than opaque AI reasoning. Rather than documenting implementation details, this playbook illustrates the repeatable investigative methodology used to trace conclusions back to their originating artifacts, supporting records, and verified document locations.
+The Forensics Playbook demonstrates how the Continuous Intelligence Platform (CIP) establishes confidence in its answers through deterministic evidence lineage rather than opaque AI reasoning. Rather than documenting implementation details, this playbook illustrates the repeatable investigative methodology used to trace conclusions back to their originating artifacts, supporting records, and verified document locations.
 
 The objective is to demonstrate how the platform preserves explainability, traceability, and evidence integrity throughout an investigation while protecting proprietary implementation details.
 
@@ -94,7 +83,7 @@ Every answer can be reconstructed by traversing this evidence lineage. Rather th
 
 Every investigation performed by the platform follows the same core principles regardless of the document type or question being answered.
 
-- **Evidence Before Interpretation** — Conclusions are derived from authoritative records before AI-assisted reasoning is presented.
+- **Source Integrity Before AI Interpretation** — Conclusions are derived from authoritative records before AI-assisted reasoning is presented.
 
 - **Deterministic Traceability** — Every investigative step is traceable to supporting records and source artifacts.
 
@@ -120,4 +109,4 @@ This playbook illustrates architectural behavior and evidence lineage without re
 
 Copyright © 2026 Joseph Contreras
 
-This document is part of the AI Document Library Technical Library.
+This document is part of the Continuous Intelligence Platform Technical Library.
