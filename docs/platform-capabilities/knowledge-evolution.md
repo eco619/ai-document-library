@@ -1,27 +1,12 @@
 # Knowledge Evolution
 
-------------------------------------------------------------------------
-Attribute                           Value
------------------------------------ -----------------------------------
-**Document Status**                 Published
-
-**Version**                         1.0
-
-**Audience**                        Business Leaders, Project Managers,
-                                    Software Architects, Developers,
-                                    Technical Reviewers
-
-**Purpose**                         Demonstrate how the platform
-                                    continuously evaluates new evidence,
-                                    preserves historical knowledge, and
-                                    explains why conclusions evolve over
-                                    time.
-
-**Related Documents**               [Design Philosophy](../technical-library/design-philosophy.md),
-                                    [Architectural Rationale](../technical-library/architectural-rationale.md),
-                                    [Canonical Schemas](../technical-library/schemas.md),
-                                    [Forensics Playbook](../technical-library/forensics-playbook.md)
-------------------------------------------------------------------------
+| Attribute | Value |
+|---|---|
+| **Document Status** | Published |
+| **Version** | 1.0 |
+| **Audience** | Business Leaders, Project Managers, Software Architects, Developers, Technical Reviewers |
+| **Purpose** | Demonstrate how the platform continuously evaluates new information, preserves historical knowledge, and explains why conclusions evolve over time. |
+| **Related Documents** | [Design Philosophy](../technical-library/design-philosophy.md), [Architectural Rationale](../technical-library/architectural-rationale.md), [Canonical Schemas](../technical-library/canonical-schemas.md), [Forensics Playbook](../technical-library/forensics-playbook.md) |
 
 ---
 
@@ -29,7 +14,7 @@ Attribute                           Value
 
 Traditional AI systems answer questions using the information available at the moment the question is asked. When new documents are introduced, previous answers are often silently replaced without identifying what changed, why the answer changed, or which previous conclusions were affected.
 
-The AI Document Library treats knowledge as an evolving engineering asset rather than a temporary AI response. Every answer remains connected to the evidence that supported it when it was produced. As new artifacts are introduced, the platform evaluates their impact on existing observations, relationships, conclusions, and answers while preserving complete historical traceability.
+The Continuous Intelligence Platform (CIP) treats knowledge as an evolving engineering asset rather than a temporary AI response. Every answer remains connected to the evidence that supported it when it was produced. As new artifacts are introduced, the platform evaluates their impact on existing observations, relationships, conclusions, and answers while preserving complete historical traceability.
 
 The platform does not simply provide answers—it identifies when a previously correct answer is no longer correct, explains why it changed, and preserves the complete history of that decision.
 
@@ -47,7 +32,7 @@ Instead of silently replacing answers, the platform identifies:
 
 - Which conclusions are affected.
 - Why they changed.
-- What new evidence caused the change.
+- What new information caused the change.
 - Which previous decisions may require review.
 
 This capability helps organizations reduce risk, improve decision confidence, and maintain complete transparency throughout the lifecycle of a project.
@@ -60,7 +45,7 @@ This capability helps organizations reduce risk, improve decision confidence, an
                     Original Answer
                           │
                           ▼
-                 New Evidence Arrives
+                 New Information Arrives
                           │
                           ▼
                  Impact Assessment
@@ -155,7 +140,7 @@ High
 
 ---
 
-# Example 2 — Evidence Evolution
+# Example 2 — Information Evolution
 
 ## Project Question
 
@@ -267,7 +252,7 @@ Examples include:
 
 ---
 
-## Evidence Evolution
+## Information Evolution
 
 Knowledge changes because previously unavailable information becomes available.
 
@@ -288,9 +273,9 @@ Knowledge Evolution provides capabilities beyond traditional document retrieval 
 
 - Preserves historical answers instead of overwriting them.
 - Explains why answers changed.
-- Identifies the evidence responsible for the change.
+- Identifies the new information responsible for triggering the change.
 - Automatically determines which conclusions require review.
-- Maintains complete evidence lineage.
+- Maintains complete source and information lineage.
 - Creates an auditable history of evolving project knowledge.
 - Reduces the risk of decisions being made from outdated or incomplete information.
 
@@ -298,16 +283,16 @@ Knowledge Evolution provides capabilities beyond traditional document retrieval 
 
 # Design Principles
 
-- Knowledge evolves; evidence is preserved.
+- Knowledge evolves; source information is preserved.
 - Original artifacts remain immutable.
 - Historical conclusions are never destroyed.
 - Every change must be explainable.
 - Every updated answer must be supported by authoritative evidence.
 - Users should understand both **what changed** and **why it changed**.
-- Confidence should increase as evidence becomes more complete.
+- Confidence should increase as supporting information becomes more complete and verification strengthens the conclusion.
 
 ---
 
 Copyright © 2026 Joseph Contreras
 
-This document is part of the AI Document Library Platform Capabilities.
+This document is part of the Continuous Intelligence Platform capability documentation.
