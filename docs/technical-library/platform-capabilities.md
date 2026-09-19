@@ -1,8 +1,6 @@
 # Platform Capabilities
 
-The AI Document Library is more than a document management system. It is
-an autonomous document intelligence platform designed to help organizations
-understand, verify, and continuously improve their knowledge.
+The Continuous Intelligence Platform (CIP) is more than a document management system. It is an autonomous intelligence platform designed to help organizations understand, verify, and continuously improve their knowledge.
 
 Where the **Technical Library** explains **how** the platform is
 engineered, the **Platform Capabilities** collection explains **what**
@@ -27,9 +25,7 @@ The Platform Capabilities collection is intended for:
 -   Developers
 -   Technical Reviewers
 
-Its purpose is to demonstrate how the AI Document Library transforms
-project information into trustworthy organizational knowledge while
-preserving complete source and information lineage and explainable decision making.
+Its purpose is to demonstrate how CIP transforms project information into trustworthy organizational knowledge while preserving complete source and information lineage and explainable decision making.
 
 ------------------------------------------------------------------------
 
@@ -51,20 +47,15 @@ foundation that includes:
 -   Forensic investigation workflows
 -   Immutable artifact identity
 
-The underlying component responsibilities have completed standalone
-Validation against real operational documentation and are currently
-being implemented within the unified autonomous platform.
+The underlying component responsibilities completed standalone Validation against real operational documentation before being incorporated into the unified autonomous platform. The Continuous Intelligence Platform has completed Implementation Verification and is currently in Baseline Testing against real operational project information.
 
-These capabilities form the validated architectural and component
-foundation of the AI Document Library.
+These capabilities form the validated architectural and component foundation of the Continuous Intelligence Platform.
 
 ------------------------------------------------------------------------
 
 ## Platform Growth
 
-Platform growth will extend the validated architectural foundation as
-the current Implementation phase progresses and as additional enterprise
-capabilities are introduced.
+Platform growth will extend the capabilities of the Continuous Intelligence Platform while preserving the engineering principles established by the platform and incorporating what is learned through Baseline Testing.
 
 Examples include:
 
@@ -82,8 +73,7 @@ than redefine it.
 
 ## Long-Term Vision
 
-The long-term vision of the AI Document Library extends beyond document
-management toward enterprise knowledge intelligence.
+The long-term vision of the Continuous Intelligence Platform extends beyond document management toward enterprise knowledge intelligence.
 
 Future architectural direction includes:
 
@@ -95,6 +85,10 @@ Future architectural direction includes:
 -   High-performance processing modules
 -   Autonomous knowledge discovery
 -   Continuous organizational learning
+-   CAD and DWG intelligence, including discipline, layer, spatial, and cross-document relationships
+-   Expanded communication and attachment intelligence across organizational records
+-   Deterministic control architecture for governing autonomous system behavior
+-   Expanded multimodal interpretation of drawings, markups, annotations, handwriting, and other visual information
 
 The objective is to create an autonomous intelligence platform that continuously
 transforms organizational information into trusted knowledge.
@@ -106,46 +100,20 @@ transforms organizational information into trusted knowledge.
 Each document within this collection explores one major capability of
 the platform.
 
-  ---------------------------------------------------------------------
-  Capability                        Description
-  --------------------------------- -----------------------------------
-  **Knowledge Evolution**           Explains how the platform preserves
-                                    historical answers, evaluates newly
-                                    introduced information, and explains
-                                    why conclusions change over time.
+  | Capability | Description |
+|---|---|
+| **Knowledge Evolution** | Explains how the platform preserves historical answers, evaluates newly introduced information, and explains why conclusions change over time. |
+| **Operational Intelligence** | Describes how information, observations, and relationships are transformed into actionable organizational insight. |
+| **Information Impact Analysis** | Explains how newly discovered information automatically identifies affected conclusions and supporting records. |
+| **Notification Engine** | Describes intelligent notifications generated when information changes affect existing knowledge. |
+| **Security and Access** | Describes the architecture for enterprise authentication, authorization, and controlled access to sensitive organizational information. |
+| **Emerging Capabilities** | Describes future platform directions that extend the architectural foundation established by Version 1.0. |
 
-  **Operational Intelligence**      Describes how information,
-                                    observations, and relationships are
-                                    transformed into actionable
-                                    organizational insight.
-
-  **Information Impact Analysis**      Explains how newly discovered
-                                    information automatically identifies
-                                    affected conclusions and supporting
-                                    records.
-
-  **Notification Engine**           Describes intelligent notifications
-                                    generated when information changes
-                                    affect existing knowledge.
-
-  **Security and Access**           Describes the architecture for
-                                    enterprise authentication,
-                                    authorization, and controlled
-                                    access to sensitive organizational
-                                    information.
-
-  **Emerging Capabilities**         Describes future platform
-                                    directions that extend the
-                                    architectural foundation
-                                    established by Version 1.0.
-  ---------------------------------------------------------------------
-
-------------------------------------------------------------------------
+---
 
 ## Relationship to the Technical Library
 
-The AI Document Library documentation is organized into two
-complementary collections.
+The Continuous Intelligence Platform documentation is organized into two complementary collections.
 
 ### Technical Library
 
@@ -162,12 +130,10 @@ Topics include:
 
 Explains what the platform enables organizations to accomplish.
 
-Together these collections provide both the engineering foundation and
-the operational value of the AI Document Library.
+Together these collections provide both the engineering foundation and the operational value of the Continuous Intelligence Platform.
 
 ------------------------------------------------------------------------
 
 Copyright © 2026 Joseph Contreras
 
-This document is part of the AI Document Library Platform Capabilities
-collection.
+This document is part of the Continuous Intelligence Platform Capabilities collection.
