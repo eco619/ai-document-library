@@ -229,6 +229,5 @@ it.
 
 ---
 
-**Developed by eco619**
-
+**Developed by eco619**  
 **Principal Architect:** Joseph Contreras
