@@ -16,6 +16,14 @@ The platform is engineered to preserve those sources as authoritative artifacts,
 
 Artificial intelligence is a capability within the architecture. It is not the authority that establishes source identity, provenance, execution integrity, or verification state.
 
+## CIP Architectural Overview
+
+![Continuous Intelligence Platform — Architectural Overview](docs/architecture/Continuous%20Intelligence%20Platform%20Overview.png)
+
+The illustration presents the Continuous Intelligence Platform's architectural organization, information flow, specialized processing responsibilities, verification boundaries, and broader engineering direction.
+
+For additional context, see the [CIP Architectural Overview](https://eco619.com/cip-architecture) and the engineering case study, [From Component Validation to Baseline Testing](docs/engineering-notebooks/from-component-validation-to-baseline-testing.md).
+  
 ---
 
 ## Platform Naming & Repository Continuity
