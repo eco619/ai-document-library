@@ -51,6 +51,17 @@ A controlled multi-format execution has been recorded to make the implemented pr
 **▶ [Watch the Autonomous Platform — Controlled Implementation Verification](docs/implementation-verification/autonomous-platform-controlled-execution.md)**
 
 Broader historical-project execution now continues through baseline testing and end-to-end evaluation of the integrated platform.
+
+### Baseline Test II Demonstrations
+
+These excerpts show the processing records behind a future answer: what CIP observes, how it records uncertainty, and what remains open for review.
+
+- **When Markup Changes the Answer** pairs the original PDF with CIP’s recorded observations to show how a handwritten note, an arrow, and nearby text can change the evidence needed to answer a question.
+- **When a PDF Reader Reports an Error** shows CIP continuing into page-by-page visual observation after MuPDF reports a structure-tree error.
+- **When a Page Needs Further Review** shows CIP identifying two pages affected by a script error and recording what still needs to be clarified.
+
+▶ [Watch the Baseline Test II demonstrations on eco619.com](https://eco619.com/demostrations)
+
 ---
 
 ## About This Repository
